@@ -1,0 +1,12 @@
+{
+  "name": "halisi-beauty",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:page": "python3 scripts/build.py"
+  },
+  "dependencies": {
+    "@vercel/blob": "^1.1.1"
+  },
+  "engines": { "node": ">=18" }
+}

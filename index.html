@@ -1,0 +1,1368 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Genuine US body care, hair care and fragrance, delivered across Kenya. Pay with M-Pesa.">
+<meta name="theme-color" content="#26131F">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%2326131F%22/%3E%3Ctext x=%2216%22 y=%2223%22 text-anchor=%22middle%22 font-family=%22Arial Black,sans-serif%22 font-size=%2219%22 fill=%22%23F07CA3%22%3Eh%3C/text%3E%3C/svg%3E">
+<title>Halisi Beauty</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&family=Caveat:wght@500&display=swap">
+<style>
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+body{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root{
+  --ground:#F6F0EE; --paper:#FFFFFF; --soft:#EFE3E7; --ink:#26131F; --muted:#6D5864; --line:#E3D5DA;
+  --accent:#B8305F; --accent-hover:#9C2550; --on-accent:#FFFFFF;
+  --seal:#1D6A50; --seal-soft:#DDEFE7; --warn:#9A5B06; --warn-soft:#FBEBD2; --danger:#B42318;
+  --scrim:rgba(38,19,31,.5);
+  --display:'Syne','Arial Black',system-ui,sans-serif;
+  --body:'Figtree',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,Menlo,Consolas,monospace;
+  --gutter:clamp(16px,4.5vw,64px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --ground:#1A1016; --paper:#24171F; --soft:#301F29; --ink:#F7EDF1; --muted:#BCA6B2; --line:#3D2B35;
+  --accent:#F07CA3; --accent-hover:#F59BB9; --on-accent:#2A0E1B;
+  --seal:#6BCBA5; --seal-soft:#173529; --warn:#F2B866; --warn-soft:#3A2A12; --danger:#FF8A7E; --scrim:rgba(0,0,0,.6);
+}}
+:root[data-theme="dark"]{
+  --ground:#1A1016; --paper:#24171F; --soft:#301F29; --ink:#F7EDF1; --muted:#BCA6B2; --line:#3D2B35;
+  --accent:#F07CA3; --accent-hover:#F59BB9; --on-accent:#2A0E1B;
+  --seal:#6BCBA5; --seal-soft:#173529; --warn:#F2B866; --warn-soft:#3A2A12; --danger:#FF8A7E; --scrim:rgba(0,0,0,.6);
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
+button,input,select,textarea{font:inherit;color:inherit}
+a{color:inherit}
+:focus-visible{outline:2.5px solid var(--accent);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.02em;margin:0;text-wrap:balance;line-height:1.02}
+p{margin:0}
+.wrap{padding-inline:var(--gutter);max-width:1360px;margin-inline:auto}
+.mono{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+.muted{color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 24px;border-radius:999px;border:0;font-weight:700;font-size:16px;cursor:pointer;text-decoration:none;transition:background .15s,transform .1s}
+.btn:active{transform:scale(.98)}
+.btn-accent{background:var(--accent);color:var(--on-accent)}
+.btn-accent:hover{background:var(--accent-hover)}
+.btn-ink{background:var(--ink);color:var(--ground)}
+.btn-line{background:transparent;border:1.5px solid var(--ink)}
+.btn-line:hover{background:var(--soft)}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+.icon-btn{width:44px;height:44px;border:0;background:transparent;display:grid;place-items:center;cursor:pointer;border-radius:999px}
+.icon-btn:hover{background:var(--soft)}
+.link{background:none;border:0;padding:0;font-weight:600;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+
+.proto{background:var(--soft);color:var(--muted);font-size:12.5px;text-align:center;padding:7px 16px}
+.announce{background:var(--ink);color:var(--ground);font-size:13px;padding:9px 16px;display:flex;justify-content:center;flex-wrap:wrap;gap:4px 22px}
+.announce b{font-weight:600}
+@media (max-width:640px){.announce .hide-sm{display:none}}
+
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--ground);border-bottom:1px solid var(--line)}
+.top-row{height:66px;display:flex;align-items:center;gap:20px}
+.logo{font-family:var(--display);font-weight:800;font-size:28px;letter-spacing:-.03em;background:none;border:0;padding:0;cursor:pointer;display:flex;align-items:baseline;gap:6px;line-height:1}
+.logo i{font-style:normal;color:var(--accent)}
+.logo small{font-family:var(--mono);font-size:10.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.nav{display:flex;gap:22px;margin-left:auto;font-weight:500;font-size:15px}
+.nav button{background:none;border:0;padding:6px 0;cursor:pointer;border-bottom:2px solid transparent}
+.nav button:hover{border-bottom-color:var(--ink)}
+.top-actions{display:flex;align-items:center;gap:4px;margin-left:12px}
+.bag-btn{height:44px;padding:0 16px;border:0;border-radius:999px;background:var(--ink);color:var(--ground);display:flex;align-items:center;gap:8px;font-weight:600;cursor:pointer}
+.bag-btn .count{font-family:var(--mono);font-size:12px;background:var(--accent);color:var(--on-accent);border-radius:999px;min-width:22px;height:22px;display:grid;place-items:center;padding:0 6px}
+.mnav{display:none;gap:8px;overflow-x:auto;padding-bottom:12px;scrollbar-width:none}
+.mnav::-webkit-scrollbar{display:none}
+.mnav button{flex-shrink:0;height:36px;padding:0 14px;border-radius:999px;border:1px solid var(--line);background:var(--paper);font-size:14px;font-weight:500;cursor:pointer}
+@media (max-width:900px){.nav{display:none}.top-actions{margin-left:auto}.mnav{display:flex}.bag-btn .lbl{display:none}}
+
+/* hero */
+.hero{display:grid;gap:32px;padding-block:36px 56px;align-items:center}
+.hero-copy{display:flex;flex-direction:column;gap:22px}
+.hero h1{font-size:clamp(46px,7.2vw,96px);letter-spacing:-.035em;line-height:.94}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero-copy>p{font-size:clamp(16px,1.4vw,19px);max-width:32em;color:var(--muted)}
+.ctas{display:flex;flex-wrap:wrap;gap:10px}
+.facts{display:flex;flex-wrap:wrap;gap:10px 28px;padding-top:6px}
+.facts div{display:flex;flex-direction:column}
+.facts b{font-family:var(--display);font-size:30px;line-height:1}
+.facts span{font-size:13px;color:var(--muted)}
+.manifest{position:relative;background:var(--paper);border:1.5px dashed var(--line);border-radius:22px;padding:18px;display:flex;flex-direction:column;gap:14px}
+.manifest-head,.manifest-foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--muted)}
+.manifest-head b{color:var(--ink)}
+.manifest-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.manifest-row button{border:0;padding:0;background:none;cursor:pointer;display:flex;flex-direction:column;gap:6px;text-align:left}
+.manifest-row .r{border-radius:14px;overflow:hidden}
+.manifest-row small{font-size:12.5px;color:var(--muted);line-height:1.3}
+.stamp{position:absolute;right:-14px;top:-30px;width:118px;height:118px;color:var(--seal)}
+.stamp svg{width:100%;height:100%;animation:spin 30s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (min-width:960px){.hero{grid-template-columns:6fr 5fr;gap:56px;padding-block:56px 72px}}
+@media (max-width:600px){.stamp{width:92px;height:92px;right:-6px;top:-38px}}
+
+.r{position:relative;aspect-ratio:5/6;max-width:100%}
+.r svg{display:block;width:100%;height:100%}
+
+.trust{border-block:1px solid var(--line);background:var(--paper)}
+.trust .wrap{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;padding-block:18px}
+.trust div{display:flex;gap:10px;align-items:flex-start;font-size:14.5px}
+.trust svg{flex-shrink:0;color:var(--seal);margin-top:2px}
+.trust b{display:block}
+.trust span{color:var(--muted);font-size:13.5px}
+@media (min-width:900px){.trust .wrap{grid-template-columns:repeat(4,minmax(0,1fr))}}
+
+section.block{padding-block:clamp(48px,7vw,88px)}
+.sec-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:14px 24px;margin-bottom:26px}
+.sec-head h2{font-size:clamp(34px,4.6vw,58px)}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:10px;font-weight:600}
+
+/* shop */
+.filters{display:flex;flex-direction:column;gap:12px;margin-bottom:24px}
+.cats{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:2px}
+.cats::-webkit-scrollbar{display:none}
+.cats button{flex-shrink:0;height:40px;padding:0 16px;border-radius:999px;border:1.5px solid var(--line);background:var(--paper);font-weight:600;font-size:14.5px;cursor:pointer;display:flex;gap:8px;align-items:center}
+.cats button span{font-family:var(--mono);font-size:11.5px;color:var(--muted)}
+.cats button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--ground)}
+.cats button[aria-pressed="true"] span{color:var(--ground);opacity:.7}
+.tools{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.search{flex:1 1 260px;position:relative}
+.search svg{position:absolute;left:16px;top:50%;transform:translateY(-50%);color:var(--muted)}
+.search input{width:100%;height:46px;border-radius:999px;border:1.5px solid var(--line);background:var(--paper);padding:0 16px 0 44px;font-size:15px}
+.tools select{height:46px;border-radius:999px;border:1.5px solid var(--line);background:var(--paper);padding:0 14px;font-size:15px;max-width:100%}
+.result-count{font-size:14px;color:var(--muted);margin-left:auto}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 12px}
+@media (min-width:760px){.grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:36px 20px}}
+@media (min-width:1150px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.card{display:flex;flex-direction:column;gap:10px;background:none;border:0;padding:0;text-align:left;cursor:pointer;min-width:0}
+.card .r{border-radius:18px;overflow:hidden}
+.card .r svg{transition:transform .35s ease}
+.card:hover .r svg{transform:scale(1.035)}
+.badge{position:absolute;left:10px;top:10px;font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:5px 9px;border-radius:999px;background:var(--paper);color:var(--ink)}
+.badge.low{background:var(--warn-soft);color:var(--warn)}
+.badge.out{background:var(--ink);color:var(--ground)}
+.card-brand{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.card-name{font-weight:600;font-size:15.5px;line-height:1.3}
+.card-meta{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:14px;align-items:baseline}
+.card-meta b{white-space:nowrap}
+.dots{display:flex;gap:4px;align-items:center;flex-wrap:wrap}
+.dots i{width:12px;height:12px;border-radius:999px;border:1px solid rgba(0,0,0,.15);display:block}
+.dots em{font-style:normal;font-size:13px;color:var(--muted);margin-left:4px}
+.empty{padding:48px 0;text-align:center;color:var(--muted)}
+
+/* brands */
+.brands{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+@media (min-width:760px){.brands{grid-template-columns:repeat(5,minmax(0,1fr))}}
+.brands button{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:18px 16px;text-align:left;cursor:pointer;display:flex;flex-direction:column;gap:4px;min-height:100px;justify-content:space-between}
+.brands button:hover{border-color:var(--ink)}
+.brands b{font-family:var(--display);font-size:20px;line-height:1.05}
+.brands span{font-size:13px;color:var(--muted)}
+
+/* genuine */
+.genuine{background:var(--ink);color:var(--ground)}
+.genuine .eyebrow{color:var(--accent)}
+.genuine .muted{color:color-mix(in srgb,var(--ground) 70%,var(--ink))}
+.g-grid{display:grid;gap:18px}
+@media (min-width:900px){.g-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}}
+.g-item{border-top:1.5px solid color-mix(in srgb,var(--ground) 30%,var(--ink));padding-top:18px;display:flex;flex-direction:column;gap:8px}
+.g-item h3{font-size:24px}
+.fakes{margin-top:40px;background:color-mix(in srgb,var(--ground) 8%,var(--ink));border-radius:20px;padding:clamp(20px,3vw,32px);display:grid;gap:18px}
+.fakes ul{margin:0;padding-left:20px;display:grid;gap:8px}
+@media (min-width:900px){.fakes{grid-template-columns:4fr 7fr;align-items:start}.fakes ul{grid-template-columns:1fr 1fr;gap:10px 28px}}
+
+/* delivery */
+.steps{display:grid;gap:14px;list-style:none;padding:0;margin:0 0 36px;counter-reset:s}
+@media (min-width:900px){.steps{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.steps li{background:var(--paper);border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:6px;counter-increment:s}
+.steps li::before{content:counter(s);font-family:var(--display);font-weight:800;font-size:15px;width:34px;height:34px;border-radius:999px;background:var(--accent);color:var(--on-accent);display:grid;place-items:center;margin-bottom:6px}
+.steps b{font-size:17px}
+.steps span{font-size:14.5px;color:var(--muted)}
+.zones-wrap{overflow-x:auto}
+table.zones{width:100%;border-collapse:collapse;font-size:15px;min-width:520px}
+.zones th,.zones td{text-align:left;padding:14px 12px;border-bottom:1px solid var(--line)}
+.zones th{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.zones td:last-child,.zones th:last-child{text-align:right}
+.mpesa-note{margin-top:20px;display:flex;gap:12px;align-items:flex-start;background:var(--seal-soft);color:var(--ink);border-radius:16px;padding:16px 18px;font-size:15px}
+.mpesa-note svg{color:var(--seal);flex-shrink:0;margin-top:2px}
+
+/* request + faq */
+.two{display:grid;gap:32px}
+@media (min-width:960px){.two{grid-template-columns:5fr 7fr;gap:64px}}
+.request{background:var(--soft);border-radius:24px;padding:clamp(22px,3vw,36px);display:flex;flex-direction:column;gap:16px;align-self:start}
+.request h2{font-size:clamp(28px,3vw,38px)}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:14px;font-weight:600}
+.field .hint{font-size:13px;color:var(--muted);font-weight:400}
+.field input,.field select,.field textarea{min-height:48px;border-radius:12px;border:1.5px solid var(--line);background:var(--paper);padding:10px 14px;font-size:15.5px;width:100%}
+.field textarea{min-height:84px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--ink)}
+.field.bad input,.field.bad select{border-color:var(--danger)}
+.err{font-size:13px;color:var(--danger);font-weight:500}
+.faq details{border-bottom:1px solid var(--line);padding:18px 0}
+.faq summary{font-weight:700;font-size:17px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-weight:500;font-size:22px;line-height:1}
+.faq details[open] summary::after{content:"–"}
+.faq p{margin-top:10px;color:var(--muted);max-width:60ch}
+
+footer.foot{background:var(--ink);color:var(--ground);padding-block:48px 32px;margin-top:clamp(40px,6vw,72px)}
+.foot-cols{display:grid;gap:28px;grid-template-columns:repeat(2,minmax(0,1fr))}
+.foot-cols div{display:flex;flex-direction:column;gap:9px;font-size:15px}
+.foot-cols button{background:none;border:0;padding:0;text-align:left;cursor:pointer;color:color-mix(in srgb,var(--ground) 72%,var(--ink))}
+.foot-cols .logo{color:var(--ground);cursor:default}
+@media (min-width:900px){.foot-cols{grid-template-columns:2fr 1fr 1fr 1fr}}
+.foot-base{margin-top:36px;padding-top:18px;border-top:1px solid color-mix(in srgb,var(--ground) 20%,var(--ink));display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:13px;color:color-mix(in srgb,var(--ground) 65%,var(--ink))}
+
+/* product */
+.crumbs{display:flex;gap:8px;flex-wrap:wrap;font-size:14px;color:var(--muted);padding-block:18px}
+.crumbs button{background:none;border:0;padding:0;color:var(--muted);text-decoration:underline;cursor:pointer}
+.pdp{display:grid;gap:28px;padding-bottom:56px}
+.pdp>*{min-width:0}
+.pdp-media .r{border-radius:24px;overflow:hidden;max-width:560px;margin-inline:auto}
+.pdp-info{display:flex;flex-direction:column;gap:20px}
+.pdp-info h1{font-size:clamp(32px,3.6vw,48px);overflow-wrap:anywhere}
+.pdp-price{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.pdp-price b{font-size:24px}
+.stock{font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:5px 10px;border-radius:999px;background:var(--seal-soft);color:var(--seal)}
+.stock.low{background:var(--warn-soft);color:var(--warn)}
+.stock.out{background:var(--soft);color:var(--muted)}
+.opt-label{font-size:14px;font-weight:600;display:flex;justify-content:space-between;gap:10px}
+.opt-label span{font-weight:400;color:var(--muted)}
+.variants{display:flex;flex-wrap:wrap;gap:8px}
+.variant{display:flex;align-items:center;gap:8px;min-height:44px;padding:0 14px 0 8px;border-radius:999px;border:1.5px solid var(--line);background:var(--paper);cursor:pointer;font-size:14.5px;font-weight:500}
+.variant i{width:26px;height:26px;border-radius:999px;border:1px solid rgba(0,0,0,.12)}
+.variant[aria-pressed="true"]{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.variant.sold{opacity:.5;text-decoration:line-through}
+.buy{display:flex;gap:10px;flex-wrap:wrap}
+.qty{display:flex;align-items:center;border:1.5px solid var(--line);border-radius:999px;background:var(--paper);height:50px}
+.qty button{width:44px;height:100%;border:0;background:none;cursor:pointer;font-size:20px;border-radius:999px}
+.qty button:disabled{opacity:.3;cursor:not-allowed}
+.qty output{min-width:28px;text-align:center;font-weight:700;font-variant-numeric:tabular-nums}
+.buy .btn{flex:1 1 200px}
+.specs{display:grid;grid-template-columns:auto 1fr;gap:8px 18px;font-size:14.5px;background:var(--paper);border-radius:16px;padding:16px 18px}
+.specs dt{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:3px}
+.specs dd{margin:0}
+.acc details{border-top:1px solid var(--line);padding:14px 0}
+.acc summary{font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between}
+.acc summary::-webkit-details-marker{display:none}
+.acc summary::after{content:"+"}
+.acc details[open] summary::after{content:"–"}
+.acc p{margin-top:8px;color:var(--muted);font-size:15px}
+@media (min-width:900px){.pdp{grid-template-columns:6fr 5fr;gap:56px}.pdp-media{position:sticky;top:96px;align-self:start}}
+.more h2{font-size:clamp(26px,3vw,36px);margin-bottom:20px}
+
+/* drawer */
+.scrim{position:fixed;inset:0;background:var(--scrim);z-index:40}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(430px,100%);background:var(--ground);z-index:41;display:flex;flex-direction:column;gap:14px;padding:calc(18px + env(safe-area-inset-top,0px)) 18px calc(18px + env(safe-area-inset-bottom,0px));box-shadow:-20px 0 40px rgba(0,0,0,.2)}
+.drawer-head{display:flex;justify-content:space-between;align-items:center}
+.drawer-head h2{font-size:28px}
+.bag-list{flex:1;overflow-y:auto;display:flex;flex-direction:column;gap:14px}
+.line-item{display:grid;grid-template-columns:64px minmax(0,1fr) auto;gap:12px;align-items:center}
+.line-item .r{border-radius:10px;overflow:hidden}
+.line-item b{display:block;font-size:14.5px;line-height:1.3}
+.line-item small{display:block;font-size:13px;color:var(--muted)}
+.line-item .qty{height:36px;margin-top:6px;width:max-content}
+.line-item .qty button{width:34px;font-size:17px}
+.line-item .price{font-weight:700;font-size:14px;white-space:nowrap;text-align:right;display:flex;flex-direction:column;align-items:flex-end;gap:4px}
+.line-item .price button{background:none;border:0;padding:0;font-weight:500;font-size:12.5px;color:var(--muted);text-decoration:underline;cursor:pointer}
+.totals{display:grid;gap:6px;font-size:15px;border-top:1px solid var(--line);padding-top:12px}
+.totals div{display:flex;justify-content:space-between;gap:10px}
+.totals .grand{font-weight:800;font-size:17px}
+
+/* checkout */
+.co{display:grid;gap:28px;padding-bottom:56px}
+.co>*{min-width:0}
+.co h1{font-size:clamp(34px,4vw,52px);margin-bottom:6px}
+.co-form{display:flex;flex-direction:column;gap:26px}
+.co-sec{display:flex;flex-direction:column;gap:14px}
+.co-sec h2{font-size:22px;letter-spacing:-.01em}
+.row2{display:grid;gap:14px}
+@media (min-width:640px){.row2{grid-template-columns:1fr 1fr}}
+.paym{display:flex;flex-direction:column;gap:10px}
+.paym label.opt{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;background:var(--paper);border:1.5px solid var(--line);border-radius:16px;padding:14px 16px;cursor:pointer}
+.paym label.opt:has(input:checked){border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.paym input[type=radio]{width:20px;height:20px;margin:2px 0 0;accent-color:var(--accent);grid-row:span 2}
+.paym b{font-size:15.5px}
+.paym span{font-size:14px;color:var(--muted)}
+.till{background:var(--seal-soft);border-radius:16px;padding:16px 18px;display:flex;flex-direction:column;gap:12px}
+.till ol{margin:0;padding-left:20px;font-size:14.5px;display:grid;gap:4px}
+.summary{background:var(--paper);border-radius:22px;padding:20px;display:flex;flex-direction:column;gap:14px;align-self:start}
+.summary h2{font-size:22px}
+@media (min-width:960px){.co{grid-template-columns:7fr 5fr;gap:56px}.summary{position:sticky;top:96px}}
+
+/* modal + toast */
+.modal{position:fixed;inset:0;z-index:60;display:grid;place-items:center;padding:16px;background:var(--scrim)}
+.sheet{background:var(--ground);border-radius:24px;width:min(420px,100%);padding:28px 24px;display:flex;flex-direction:column;gap:14px;text-align:center;align-items:center}
+.sheet h2{font-size:26px}
+.sheet p{color:var(--muted)}
+.phone{width:92px;height:150px;border-radius:18px;border:3px solid var(--ink);position:relative;display:grid;place-items:center;background:var(--paper)}
+.phone::before{content:"";position:absolute;top:8px;width:26px;height:4px;border-radius:4px;background:var(--ink)}
+.phone .pin{font-family:var(--mono);font-size:12px;letter-spacing:.2em;background:var(--seal);color:var(--paper);padding:6px 8px;border-radius:6px;animation:pulse 1.4s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.55}}
+.spinner{width:44px;height:44px;border-radius:999px;border:4px solid var(--line);border-top-color:var(--accent);animation:spin 1s linear infinite}
+.sheet .btns{display:flex;flex-direction:column;gap:8px;width:100%}
+.sheet .tiny{font-size:12.5px;color:var(--muted)}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--ground);padding:13px 20px;border-radius:14px;font-size:15px;z-index:70;max-width:calc(100% - 32px);box-shadow:0 10px 30px rgba(0,0,0,.25)}
+
+/* done */
+.done{max-width:720px;margin-inline:auto;padding-block:48px 64px;display:flex;flex-direction:column;gap:22px}
+.done .tick{width:64px;height:64px;border-radius:999px;background:var(--seal);color:var(--paper);display:grid;place-items:center}
+.done h1{font-size:clamp(34px,4.4vw,54px)}
+.receipt{background:var(--paper);border-radius:20px;padding:20px;display:flex;flex-direction:column;gap:12px;border:1.5px dashed var(--line)}
+.receipt .kv{display:flex;justify-content:space-between;gap:12px;font-size:15px;flex-wrap:wrap}
+.receipt .kv span:first-child{color:var(--muted)}
+
+/* v2: transit + admin */
+:root{--transit:#2C5C8C;--transit-soft:#DCE8F4}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--transit:#93BCE8;--transit-soft:#1C2C3E}}
+:root[data-theme="dark"]{--transit:#93BCE8;--transit-soft:#1C2C3E}
+.badge.otw,.stock.otw{background:var(--transit-soft);color:var(--transit)}
+.r img.ph{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease}
+.card:hover .r img.ph{transform:scale(1.035)}
+.adm-link{color:var(--accent)}
+.mnav .adm-link{border-color:var(--accent)}
+.pre-note{background:var(--transit-soft);color:var(--ink);border-radius:14px;padding:12px 14px;font-size:14px}
+.adm-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:12px 24px;padding-bottom:20px}
+.adm-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:24px}
+@media (min-width:900px){.adm-stats{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.stat{background:var(--paper);border-radius:16px;padding:14px 16px}
+.stat b{display:block;font-family:var(--display);font-size:30px;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat span{font-size:13.5px;color:var(--muted)}
+.stat.warn b{color:var(--warn)}
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin-bottom:22px;overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tabs button{background:none;border:0;padding:12px 14px;font-weight:600;font-size:15px;cursor:pointer;border-bottom:2.5px solid transparent;white-space:nowrap;display:flex;gap:6px;align-items:center}
+.tabs button[aria-selected="true"]{border-bottom-color:var(--accent)}
+.tab-n:empty{display:none}
+.tab-n{font-family:var(--mono);font-size:11px;background:var(--accent);color:var(--on-accent);border-radius:999px;padding:2px 7px}
+.arow{display:grid;grid-template-columns:56px minmax(0,1fr) minmax(0,380px) auto;gap:10px 14px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
+.arow .thumb{width:56px;border-radius:10px;overflow:hidden}
+.ainfo{display:flex;flex-direction:column;min-width:0}
+.ainfo b{font-size:15px;line-height:1.3}
+.ainfo small{font-size:13px;color:var(--muted)}
+.ainfo .mono{font-size:10.5px}
+.aedit{display:grid;grid-template-columns:1.4fr .8fr 1fr;gap:8px}
+.afield{display:flex;flex-direction:column;gap:3px;font-size:11.5px;color:var(--muted);font-weight:500}
+.afield input,.afield select{height:40px;border-radius:10px;border:1.5px solid var(--line);background:var(--paper);padding:0 10px;font-size:14.5px;color:var(--ink);width:100%;min-width:0}
+.afield input:focus,.afield select:focus{outline:none;border-color:var(--ink)}
+.arow.dirty .afield input,.arow.dirty .afield select{border-color:var(--accent)}
+.aact{display:flex;gap:6px}
+.btn-sm{height:38px;padding:0 14px;border-radius:999px;border:0;background:var(--ink);color:var(--ground);font-weight:600;font-size:14px;cursor:pointer;white-space:nowrap}
+.btn-sm.line{background:transparent;border:1.5px solid var(--line);color:var(--ink)}
+.btn-sm:disabled{opacity:.35;cursor:not-allowed}
+.arow.hid .ainfo,.arow.hid .thumb{opacity:.5}
+@media (max-width:860px){.arow{grid-template-columns:56px minmax(0,1fr)}.aedit,.aact{grid-column:1/-1}.aact .btn-sm{flex:1}}
+.pform{display:grid;gap:28px;align-items:start}
+.pprev{display:flex;flex-direction:column;gap:10px;background:var(--paper);border-radius:20px;padding:18px}
+@media (min-width:960px){.pform{grid-template-columns:7fr 4fr;gap:48px}.pprev{position:sticky;top:96px}}
+.ship{background:var(--paper);border-radius:20px;padding:20px;display:flex;flex-direction:column;gap:12px}
+.ship-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;align-items:flex-end}
+.ship-head h3{font-size:28px}
+.bar{height:8px;border-radius:99px;background:var(--soft);overflow:hidden}
+.bar i{display:block;height:100%;background:var(--transit);border-radius:99px}
+.ship ul{margin:0;padding:0;list-style:none;display:grid;gap:6px;font-size:14.5px}
+.ship li{display:flex;justify-content:space-between;gap:10px;border-top:1px solid var(--line);padding-top:6px}
+.order{background:var(--paper);border-radius:18px;padding:16px 18px;display:grid;gap:10px}
+.order-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;align-items:center}
+.order-head b{font-family:var(--mono);font-size:13px;letter-spacing:.04em}
+.order .kv{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;font-size:14.5px}
+.order .kv span:nth-child(odd){color:var(--muted);font-size:13px;padding-top:2px}
+.order ul{margin:0;padding-left:18px;font-size:14.5px}
+.st{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;padding:4px 9px;border-radius:999px;background:var(--soft)}
+.st.new{background:var(--accent);color:var(--on-accent)}
+.st.confirmed,.st.out{background:var(--transit-soft);color:var(--transit)}
+.st.delivered{background:var(--seal-soft);color:var(--seal)}
+
+/* ===== Editorial theme: serif display, coral + sun ===== */
+:root{
+  --ground:#F8F6F1; --paper:#FFFFFF; --soft:#EFEAE1; --ink:#1D1B18; --muted:#6B645A; --line:#E4DED3;
+  --accent:#C8604A; --accent-hover:#B0513D; --on-accent:#FFFFFF;
+  --coral:#DA7259; --sun:#F2D77F; --scrim:rgba(29,27,24,.45);
+  --display:'Instrument Serif','Iowan Old Style','Palatino Linotype',Georgia,serif;
+  --serif:'Newsreader','Iowan Old Style',Georgia,serif;
+  --body:'Hanken Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'Hanken Grotesk',system-ui,-apple-system,sans-serif;
+  --hand:'Caveat','Segoe Print','Bradley Hand',cursive;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --ground:#171513; --paper:#211E1B; --soft:#2A2622; --ink:#F3EEE6; --muted:#B2A99D; --line:#38322C;
+  --accent:#EE9A80; --accent-hover:#F4B19C; --on-accent:#1D1B18; --coral:#B95B45; --sun:#D8BB62; --scrim:rgba(0,0,0,.6);
+}}
+:root[data-theme="dark"]{
+  --ground:#171513; --paper:#211E1B; --soft:#2A2622; --ink:#F3EEE6; --muted:#B2A99D; --line:#38322C;
+  --accent:#EE9A80; --accent-hover:#F4B19C; --on-accent:#1D1B18; --coral:#B95B45; --sun:#D8BB62; --scrim:rgba(0,0,0,.6);
+}
+h1,h2,h3{font-family:var(--display);font-weight:400;letter-spacing:-.025em;line-height:.98}
+h1 em,h2 em{font-style:italic;color:var(--accent)}
+.eyebrow,.mono,.card-brand,.badge,.stock,.st,.zones th,.specs dt{font-family:var(--body);letter-spacing:.18em;font-weight:600}
+.eyebrow{color:var(--ink);font-size:11.5px}
+.genuine .eyebrow{color:var(--accent)}
+.logo{font-family:var(--display);font-weight:400;font-size:34px;letter-spacing:-.01em}
+.logo small{font-family:var(--body);font-weight:600;letter-spacing:.2em;font-size:9.5px}
+.btn{border-radius:0;min-height:54px;padding:0 26px;font-size:15px;font-weight:600;letter-spacing:.01em}
+.btn-accent{background:var(--ink);color:var(--ground)}
+.btn-accent:hover{background:color-mix(in srgb,var(--ink) 82%,var(--accent))}
+.btn-line{border-width:1px}
+.btn .arr{font-size:18px;margin-left:18px;transition:transform .2s}
+.btn:hover .arr{transform:translateX(4px)}
+.bag-btn{border-radius:0}
+.bag-btn .count{border-radius:0}
+.card .r,.pdp-media .r,.line-item .r,.arow .thumb,.manifest-row .r{border-radius:4px}
+.brands button,.steps li,.request,.fakes,.summary,.receipt,.ship,.order,.stat,.pprev,.specs,.paym label.opt,.till,.mpesa-note,.pre-note,.sheet{border-radius:6px}
+.field input,.field select,.field textarea,.afield input,.afield select{border-radius:4px}
+.search input,.tools select{border-radius:999px}
+.sec-head h2{font-size:clamp(44px,6.4vw,84px)}
+.sec-head .muted,.lead{font-family:var(--serif);font-size:clamp(17px,1.4vw,20px);line-height:1.45;color:var(--ink)}
+.card-name{font-weight:600}
+.card-meta b{font-weight:700}
+.brands b{font-family:var(--display);font-weight:400;font-size:26px}
+.g-item h3,.fakes h3{font-size:32px!important}
+.trust{background:transparent}
+.steps li::before{font-family:var(--display);font-weight:400;font-size:20px;border-radius:0;background:var(--ink);color:var(--ground)}
+.done h1,.co h1,.pdp-info h1{font-size:clamp(40px,4.6vw,64px)}
+
+/* hero */
+.hero2{display:grid;border-bottom:1px solid var(--line);max-width:1600px;margin-inline:auto}
+.hero2-copy{padding:clamp(40px,6vw,88px) var(--gutter) clamp(36px,5vw,64px);display:flex;flex-direction:column;gap:26px;justify-content:center}
+.hero2 h1{font-size:clamp(54px,7.4vw,116px);line-height:.9;letter-spacing:-.035em}
+.hero2 .lead{max-width:30em;margin:0}
+.hero2 .ctas{align-items:center;gap:22px}
+.checks{list-style:none;margin:10px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px 22px;font-size:13px;color:var(--muted)}
+.checks li::before{content:"✓ ";color:var(--ink)}
+.hero-facts{font-size:13px;color:var(--muted)}
+.hero2-art{position:relative;background:var(--coral);overflow:hidden;min-height:420px;display:flex;align-items:flex-end;justify-content:center}
+.sun{position:absolute;width:min(74%,600px);aspect-ratio:1;border-radius:50%;background:var(--sun);left:9%;top:-6%}
+.scribble{position:absolute;right:7%;top:9%;font-family:var(--hand);font-size:clamp(24px,2.2vw,32px);line-height:1.05;color:#1D1B18;transform:rotate(-8deg);text-align:right;margin:0}
+.lineup{position:relative;display:flex;align-items:flex-end;justify-content:center;gap:4%;width:100%;padding-inline:6%}
+.lineup button{background:none;border:0;padding:0;cursor:pointer;display:block;transition:transform .3s ease;flex:none}
+.lineup button:hover{transform:translateY(-8px)}
+.lineup svg{display:block;width:100%;height:auto}
+.lineup button:nth-child(1){width:31%}.lineup button:nth-child(2){width:13.5%}.lineup button:nth-child(3){width:23.5%}.lineup button:nth-child(4){width:14%}
+.hero2-art{height:clamp(380px,56vw,700px)}
+@media (min-width:960px){.hero2{grid-template-columns:1fr 1fr}.hero2-art{height:auto;min-height:680px}.lineup{position:absolute;left:0;right:0;bottom:0}}
+@media (max-width:600px){.hero2-art{min-height:0;height:440px}.scribble{font-size:22px;top:6%}}
+</style>
+
+</head>
+<body>
+<div class="proto">Prototype · <b>[BRACKETS]</b> are details still to fill in · prices come from the “Selling Price (KES)” column · nothing is for sale yet</div>
+<div class="announce"><span><b>100% genuine</b> US brands</span><span>Delivered across Kenya</span><span class="hide-sm">Pay with <b>M-Pesa</b></span></div>
+
+<header class="top">
+  <div class="wrap">
+    <div class="top-row">
+      <button class="logo" data-go="home" aria-label="Halisi Beauty home">halisi<i>.</i><small>beauty</small></button>
+      <nav class="nav" aria-label="Main">
+        <button data-go="home" data-anchor="shop">Shop</button>
+        <button data-go="home" data-anchor="brands">Brands</button>
+        <button data-go="home" data-anchor="genuine">Why genuine</button>
+        <button data-go="home" data-anchor="delivery">Delivery &amp; M-Pesa</button>
+        <button data-go="home" data-anchor="faq">FAQ</button>
+        <button class="adm-link" data-go="admin" hidden>Manage shop</button>
+      </nav>
+      <div class="top-actions">
+        <button class="icon-btn" aria-label="Search products" id="searchJump"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button>
+        <button class="bag-btn" id="bagBtn" aria-label="Open bag"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M5 8h14l-1 12H6L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span class="lbl">Bag</span><span class="count" id="bagCount">0</span></button>
+      </div>
+    </div>
+    <div class="mnav" aria-label="Sections">
+      <button data-go="home" data-anchor="shop">Shop</button>
+      <button data-go="home" data-anchor="brands">Brands</button>
+      <button data-go="home" data-anchor="genuine">Why genuine</button>
+      <button data-go="home" data-anchor="delivery">Delivery</button>
+      <button data-go="home" data-anchor="faq">FAQ</button>
+      <button class="adm-link" data-go="admin" hidden>Manage shop</button>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- HOME -->
+<div data-view="home">
+  <section class="hero2">
+    <div class="hero2-copy">
+      <div class="eyebrow" style="margin:0">Genuine US beauty, delivered in Kenya.</div>
+      <h1>The real thing, delivered to <em>you.</em></h1>
+      <p class="lead">Body care, hair care and fragrance from the US brands you trust — bought in America, shipped by us, brought to your door. No fakes. No refills.</p>
+      <div class="ctas">
+        <button class="btn btn-accent" data-go="home" data-anchor="shop">Shop the shipment <span class="arr" aria-hidden="true">→</span></button>
+        <button class="link" data-go="home" data-anchor="delivery">How delivery works</button>
+      </div>
+      <ul class="checks"><li>Bought in US stores</li><li>Sealed &amp; new</li><li>Pay with M-Pesa</li></ul>
+      <p class="hero-facts" id="facts"></p>
+    </div>
+    <div class="hero2-art">
+      <div class="sun" aria-hidden="true"></div>
+      <p class="scribble" aria-hidden="true">the real deal,<br>straight from the US ↗</p>
+      <div class="lineup" id="manifestRow"></div>
+    </div>
+  </section>
+
+  <div class="trust">
+    <div class="wrap">
+      <div><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg><p><b>Genuine, sealed, new</b><span>Bought from US retailers</span></p></div>
+      <div><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v10H3zM14 10h4l3 3v4h-7"/><circle cx="7" cy="18" r="1.8"/><circle cx="17" cy="18" r="1.8"/></svg><p><b>Delivered to you</b><span>Nairobi &amp; countrywide</span></p></div>
+      <div><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M10 18h4"/></svg><p><b>Pay with M-Pesa</b><span>Prompt to your phone</span></p></div>
+      <div><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg><p><b>Order help on WhatsApp</b><span>[WHATSAPP NUMBER]</span></p></div>
+    </div>
+  </div>
+
+  <section class="wrap block" id="shop">
+    <div class="sec-head">
+      <div><div class="eyebrow">In stock now</div><h2>Shop the shipment</h2></div>
+      <p class="muted" style="max-width:30em">Small batches, straight from US shelves. When it’s gone, it’s gone until the next shipment.</p>
+    </div>
+    <div class="filters">
+      <div class="cats" id="cats" role="group" aria-label="Category"></div>
+      <div class="tools">
+        <div class="search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><input id="q" type="search" placeholder="Search brands, scents, products" aria-label="Search products"></div>
+        <select id="brandSel" aria-label="Brand"></select>
+        <select id="sortSel" aria-label="Sort"><option value="feat">Featured</option><option value="az">Name A–Z</option><option value="stock">Most in stock</option><option value="low">Low stock first</option></select>
+        <span class="result-count" id="resCount"></span>
+      </div>
+    </div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <section class="wrap block" id="coming" hidden style="padding-top:0">
+    <div class="sec-head"><div><div class="eyebrow" style="color:var(--transit)">On the way from the US</div><h2>Arriving soon</h2></div><p class="muted" style="max-width:32em" id="comingLead"></p></div>
+    <div class="grid" id="comingGrid"></div>
+  </section>
+
+  <section class="wrap block" id="brands" style="padding-top:0">
+    <div class="sec-head"><div><div class="eyebrow" id="brandsEyebrow">US brands</div><h2>Shop by brand</h2></div></div>
+    <div class="brands" id="brandGrid"></div>
+  </section>
+
+  <section class="genuine block" id="genuine">
+    <div class="wrap">
+      <div class="sec-head"><div><div class="eyebrow">Why genuine</div><h2>No fakes. Ever.</h2></div><p class="muted" style="max-width:32em">Fake body care is everywhere in Kenya — refilled bottles, copied labels, watered-down formulas. Here’s how we keep every item real.</p></div>
+      <div class="g-grid">
+        <div class="g-item"><h3>Bought in US stores</h3><p class="muted">Every product is bought at US retailers [STORE NAMES, e.g. Target, Walmart, Ulta — CONFIRM] and carried or shipped to Kenya by us. No middlemen, no market stalls.</p></div>
+        <div class="g-item"><h3>Sealed and new</h3><p class="muted">Items arrive in the original packaging with factory seals. Nothing is decanted, refilled or repackaged. The few duos sold without their outer box are marked on the product page.</p></div>
+        <div class="g-item"><h3>Proof on request</h3><p class="muted">Ask and we’ll share the US receipt for your item [CONFIRM], and every bottle keeps its batch code so you can check it with the brand.</p></div>
+      </div>
+      <div class="fakes">
+        <div><h3 style="font-size:26px">How to spot a fake</h3><p class="muted" style="margin-top:8px">Wherever you shop, check for these.</p></div>
+        <ul>
+          <li>Blurry print, misspellings or a label that peels too easily</li>
+          <li>No batch code or expiry stamped on the bottle</li>
+          <li>A broken, loose or missing seal under the cap</li>
+          <li>A smell or texture that doesn’t match the original</li>
+          <li>Sizes the brand doesn’t make, like “1 L” of a brand that only sells 473 mL</li>
+          <li>A price far below what the item costs in the US</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap block" id="delivery">
+    <div class="sec-head"><div><div class="eyebrow">Delivery-only · no physical shop yet</div><h2>From our bag to your door</h2></div><p class="muted" style="max-width:32em">We don’t have a shop yet, so every order is delivered. You pay by M-Pesa — no cash needed.</p></div>
+    <ol class="steps">
+      <li><b>Pick your products</b><span>Add them to your bag. Stock is live, so you only see what we actually have.</span></li>
+      <li><b>Pay with M-Pesa</b><span>Enter your number and approve the prompt on your phone, or pay to our Till.</span></li>
+      <li><b>We confirm on WhatsApp</b><span>We message you to agree a delivery time and share rider details.</span></li>
+      <li><b>Delivered to your door</b><span>Nairobi same or next day [CONFIRM]. Rest of Kenya by courier.</span></li>
+    </ol>
+    <div class="zones-wrap"><table class="zones"><thead><tr><th>Where you are</th><th>How it gets to you</th><th>When</th><th>Fee</th></tr></thead><tbody id="zonesBody"></tbody></table></div>
+    <div class="mpesa-note"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M10 18h4"/></svg><p><b>M-Pesa details:</b> Till number [TILL NUMBER] · business name [M-PESA BUSINESS NAME]. Always check the name on the prompt before entering your PIN.</p></div>
+  </section>
+
+  <section class="wrap block" id="faq" style="padding-top:0">
+    <div class="two">
+      <form class="request" id="reqForm" novalidate>
+        <div class="eyebrow" style="margin:0">Next shipment [DATE]</div>
+        <h2>Want something from the US?</h2>
+        <p class="muted">Tell us the brand and product. If enough people ask, it comes in the next box.</p>
+        <div class="field"><label for="reqWhat">Product</label><input id="reqWhat" placeholder="e.g. EOS Shea Better body lotion, Vanilla Cashmere"></div>
+        <div class="field"><label for="reqPhone">Your WhatsApp number</label><input id="reqPhone" inputmode="tel" placeholder="07XX XXX XXX"></div>
+        <button class="btn btn-ink" type="submit" style="align-self:flex-start">Send request</button>
+      </form>
+      <div>
+        <div class="eyebrow">FAQ</div>
+        <h2 style="font-size:clamp(34px,4.6vw,58px);margin-bottom:12px">Good questions</h2>
+        <div class="faq">
+          <details open><summary>Are your products original?</summary><p>Yes. Everything is bought new from US retailers and shipped to Kenya by us — never bought locally. Ask for the receipt for your item and we’ll share it [CONFIRM].</p></details>
+          <details><summary>Do you have a shop I can visit?</summary><p>Not yet. We’re delivery-only for now. [PICK-UP POINT, IF ANY]</p></details>
+          <details><summary>How do I pay?</summary><p>By M-Pesa. At checkout you can get a payment prompt on your phone, or pay to Till [TILL NUMBER] and enter the confirmation code. [Pay on delivery in Nairobi — CONFIRM IF OFFERED]</p></details>
+          <details><summary>How long does delivery take?</summary><p>Nairobi: [TIME]. Outside Nairobi: [TIME] by [COURIER]. We confirm the time with you on WhatsApp after you pay.</p></details>
+          <details><summary>What does pre-order mean?</summary><p>Products under “Arriving soon” are already bought and on their way from the US — shipping takes about 3 months. Pre-order to reserve yours and we deliver it as soon as the box lands. [PRE-ORDER PAYMENT RULE]</p></details>
+          <details><summary>Why is stock so limited?</summary><p>We bring products in small batches from the US. The stock count on each product is what we physically have. Sold out? Request it for the next shipment.</p></details>
+          <details><summary>Can I return something?</summary><p>[RETURNS POLICY — e.g. unopened items within 3 days; damaged-in-delivery items replaced]</p></details>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- PRODUCT -->
+<div data-view="product" hidden>
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><button data-go="home">Home</button><span>/</span><button data-go="home" data-anchor="shop" id="crumbCat">Shop</button><span>/</span><span id="crumbName"></span></nav>
+    <div class="pdp">
+      <div class="pdp-media"><div class="r" id="pdpImg"></div></div>
+      <div class="pdp-info">
+        <div><div class="card-brand" id="pdpBrand" style="margin-bottom:8px"></div><h1 id="pdpName"></h1></div>
+        <div class="pdp-price"><b id="pdpPrice"></b><span class="stock" id="pdpStock"></span></div>
+        <p class="pre-note" id="pdpPre" hidden></p>
+        <div id="variantWrap" style="display:flex;flex-direction:column;gap:10px">
+          <div class="opt-label">Scent / type <span id="variantName"></span></div>
+          <div class="variants" id="variants"></div>
+        </div>
+        <div class="buy">
+          <div class="qty" aria-label="Quantity"><button id="qMinus" aria-label="Fewer">−</button><output id="qOut">1</output><button id="qPlus" aria-label="More">+</button></div>
+          <button class="btn btn-accent" id="addBtn">Add to bag</button>
+        </div>
+        <dl class="specs" id="specs"></dl>
+        <div class="acc">
+          <details><summary>Is it genuine?</summary><p>Bought new from a US retailer and shipped to Kenya by us. Factory sealed, with the brand’s batch code on the pack. Ask for the receipt at any time.</p></details>
+          <details><summary>Delivery &amp; payment</summary><p>Delivery-only — Nairobi [TIME], rest of Kenya [TIME] by courier. Pay by M-Pesa at checkout.</p></details>
+          <details><summary>Photos</summary><p id="photoNote"></p></details>
+        </div>
+      </div>
+    </div>
+    <div class="more" style="padding-bottom:56px"><h2 id="moreTitle"></h2><div class="grid" id="moreGrid"></div></div>
+  </div>
+</div>
+
+<!-- CHECKOUT -->
+<div data-view="checkout" hidden>
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><button data-go="home">Home</button><span>/</span><span>Checkout</span></nav>
+    <div class="co">
+      <form class="co-form" id="coForm" novalidate>
+        <div><h1>Checkout</h1><p class="muted">Delivery-only · pay with M-Pesa</p></div>
+        <div class="co-sec">
+          <h2>Your details</h2>
+          <div class="row2">
+            <div class="field" id="f-name"><label for="coName">Full name</label><input id="coName" autocomplete="name"><span class="err" hidden></span></div>
+            <div class="field" id="f-phone"><label for="coPhone">Phone number <span class="hint">· for M-Pesa &amp; WhatsApp</span></label><input id="coPhone" inputmode="tel" autocomplete="tel" placeholder="07XX XXX XXX"><span class="err" hidden></span></div>
+          </div>
+        </div>
+        <div class="co-sec">
+          <h2>Delivery</h2>
+          <div class="field" id="f-zone"><label for="coZone">Area</label><select id="coZone"></select><span class="err" hidden></span></div>
+          <div class="row2">
+            <div class="field" id="f-loc"><label for="coLoc">Estate, street &amp; building <span class="hint" id="locHint"></span></label><input id="coLoc" placeholder="e.g. Kilimani, Argwings Kodhek Rd, Apt 4B"><span class="err" hidden></span></div>
+            <div class="field"><label for="coLandmark">Landmark <span class="hint">· optional</span></label><input id="coLandmark" placeholder="e.g. opposite Yaya Centre"></div>
+          </div>
+          <div class="row2">
+            <div class="field"><label for="coWhen">Best time</label><select id="coWhen"><option>Any time</option><option>Morning (9am–12pm)</option><option>Afternoon (12–4pm)</option><option>Evening (4–7pm)</option></select></div>
+            <div class="field"><label for="coNotes">Notes for the rider <span class="hint">· optional</span></label><input id="coNotes" placeholder="Gate code, call on arrival…"></div>
+          </div>
+        </div>
+        <div class="co-sec">
+          <h2>Payment</h2>
+          <div class="paym" id="paym">
+            <label class="opt"><input type="radio" name="pay" value="stk" checked><b>M-Pesa prompt</b><span>We send a payment request to your phone. Enter your PIN to pay.</span></label>
+            <label class="opt"><input type="radio" name="pay" value="till"><b>Pay to Till number</b><span>Lipa na M-Pesa → Buy Goods, then enter the confirmation code.</span></label>
+            <label class="opt"><input type="radio" name="pay" value="pod"><b>M-Pesa on delivery</b><span>Pay the rider by M-Pesa when your order arrives. Nairobi only. [CONFIRM IF OFFERED]</span></label>
+          </div>
+          <div class="till" id="tillBox" hidden>
+            <ol><li>Open M-Pesa and choose <b>Lipa na M-Pesa → Buy Goods and Services</b></li><li>Till number: <b>[TILL NUMBER]</b></li><li>Amount: <b id="tillAmt"></b></li><li>Check the name reads <b>[M-PESA BUSINESS NAME]</b>, then enter your PIN</li></ol>
+            <div class="field" id="f-code"><label for="coCode">M-Pesa confirmation code</label><input id="coCode" placeholder="e.g. SJK4XXXXXX" maxlength="10" style="text-transform:uppercase;font-family:var(--mono)"><span class="err" hidden></span></div>
+          </div>
+        </div>
+        <button class="btn btn-accent" type="submit" id="payBtn" style="align-self:stretch;min-height:56px;font-size:17px"></button>
+        <p class="muted" style="font-size:13.5px">By placing this order you agree to our [DELIVERY &amp; RETURNS TERMS].</p>
+      </form>
+      <aside class="summary" aria-label="Order summary">
+        <h2>Your order</h2>
+        <div id="coItems" style="display:flex;flex-direction:column;gap:12px"></div>
+        <p class="pre-note" id="coPre" hidden></p>
+        <div class="totals" id="coTotals"></div>
+      </aside>
+    </div>
+  </div>
+</div>
+
+<!-- DONE -->
+<div data-view="done" hidden>
+  <div class="wrap"><div class="done" id="doneBody"></div></div>
+</div>
+<!-- ADMIN -->
+<div data-view="admin" hidden>
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><button data-go="home">Shop</button><span>/</span><span>Manage shop</span></nav>
+    <div class="adm-head">
+      <div><div class="eyebrow">Shop owner only</div><h1 style="font-size:clamp(34px,4.4vw,54px)">Manage shop</h1></div>
+      <p class="muted" style="max-width:34em" id="admMode"></p>
+    </div>
+    <div class="adm-stats" id="admStats"></div>
+    <div class="tabs" role="tablist" aria-label="Manage shop sections">
+      <button role="tab" data-tab="products" aria-selected="true">Products</button>
+      <button role="tab" data-tab="add" aria-selected="false" id="tabAddBtn">Add product</button>
+      <button role="tab" data-tab="otw" aria-selected="false">On the way <span class="tab-n" id="nOtw"></span></button>
+      <button role="tab" data-tab="orders" aria-selected="false">Orders <span class="tab-n" id="nOrders"></span></button>
+    </div>
+
+    <section data-tabpanel="products">
+      <div class="tools" style="margin-bottom:8px">
+        <div class="search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><input id="aq" type="search" placeholder="Search your products" aria-label="Search your products"></div>
+        <select id="aStatus" aria-label="Status filter"><option value="all">All statuses</option><option value="in_stock">In stock</option><option value="on_the_way">On the way</option><option value="hidden">Hidden</option></select>
+        <select id="aPrice" aria-label="Price filter"><option value="all">All prices</option><option value="missing">Price not set</option></select>
+      </div>
+      <p class="muted" style="font-size:14px;margin-bottom:6px">Change status, quantity or selling price, then press <b>Save</b> on that row. Buying costs are never recorded here.</p>
+      <div id="aList"></div>
+    </section>
+
+    <section data-tabpanel="add" hidden>
+      <form class="pform" id="pForm" novalidate>
+        <div style="display:flex;flex-direction:column;gap:22px">
+          <div class="co-sec">
+            <h2 id="pFormTitle" style="font-size:26px">Add a product</h2>
+            <div class="row2">
+              <div class="field" id="f-pBrand"><label for="pBrand">Brand</label><input id="pBrand" list="brandList" placeholder="e.g. EOS"><datalist id="brandList"></datalist><span class="err" hidden></span></div>
+              <div class="field" id="f-pProduct"><label for="pProduct">Product name</label><input id="pProduct" placeholder="e.g. 24H Moisture Body Lotion"><span class="err" hidden></span></div>
+            </div>
+            <div class="row2">
+              <div class="field" id="f-pVariant"><label for="pVariant">Scent / type</label><input id="pVariant" placeholder="e.g. Vanilla Cashmere"><span class="err" hidden></span></div>
+              <div class="field" id="f-pSize"><label for="pSize">Size <span class="hint">· as on the pack</span></label><input id="pSize" placeholder="e.g. 16 fl oz / 473 mL"><span class="err" hidden></span></div>
+            </div>
+            <div class="row2">
+              <div class="field"><label for="pCat">Category</label><select id="pCat"></select></div>
+              <div class="field"><label for="pNotes">Short description <span class="hint">· optional</span></label><input id="pNotes" placeholder="e.g. Sulfate-free; for dry hair"></div>
+            </div>
+          </div>
+          <div class="co-sec">
+            <h2 style="font-size:22px">Stock &amp; price</h2>
+            <div class="row2">
+              <div class="field" id="f-pQty"><label for="pQty">Quantity</label><input id="pQty" type="number" min="0" step="1" inputmode="numeric" value="1"><span class="err" hidden></span></div>
+              <div class="field"><label for="pPrice">Selling price (KSh) <span class="hint">· leave blank if not decided</span></label><input id="pPrice" type="number" min="0" step="10" inputmode="numeric" placeholder="e.g. 2800"></div>
+            </div>
+            <div class="paym" role="radiogroup" aria-label="Status">
+              <label class="opt"><input type="radio" name="pStatus" value="in_stock" checked><b>In stock in Kenya</b><span>Customers can buy it now for delivery.</span></label>
+              <label class="opt"><input type="radio" name="pStatus" value="on_the_way"><b>On the way from the US</b><span>Shows under “Arriving soon”. Customers can pre-order it.</span></label>
+            </div>
+            <div class="row2" id="otwFields" hidden>
+              <div class="field"><label for="pShipped">Shipped from the US on</label><input id="pShipped" type="date"></div>
+              <div class="field" id="f-pEta"><label for="pEta">Expected in Kenya <span class="hint">· about 3 months later</span></label><input id="pEta" type="date"><span class="err" hidden></span></div>
+            </div>
+          </div>
+          <div class="co-sec">
+            <h2 style="font-size:22px">Photo</h2>
+            <div class="field"><label for="pPhoto">Upload a photo of the actual item <span class="hint">· JPG or PNG from your phone</span></label><input id="pPhoto" type="file" accept="image/jpeg,image/png,image/webp"></div>
+            <p class="muted" style="font-size:14px">No photo yet? We’ll show a drawing instead. Pick the pack shape and main colour:</p>
+            <div class="row2">
+              <div class="field"><label for="pShape">Pack shape</label><select id="pShape"></select></div>
+              <div class="field"><label for="pColor">Main colour</label><input id="pColor" type="color" value="#E9D3B4" style="padding:4px;height:48px"></div>
+            </div>
+            <label style="display:flex;gap:10px;align-items:center;font-size:14.5px" id="rmPhotoWrap" hidden><input type="checkbox" id="pRmPhoto" style="width:18px;height:18px;accent-color:var(--accent)"> Remove the current photo</label>
+          </div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <button class="btn btn-accent" type="submit" id="pSave">Add to shop</button>
+            <button class="btn btn-line" type="button" id="pCancel" hidden>Cancel editing</button>
+            <button class="btn btn-line" type="button" id="pDelete" hidden style="color:var(--danger);border-color:var(--danger)">Delete product</button>
+          </div>
+        </div>
+        <aside class="pprev">
+          <div class="mono muted">Preview</div>
+          <div class="card" style="cursor:default" id="pPreview"></div>
+        </aside>
+      </form>
+    </section>
+
+    <section data-tabpanel="otw" hidden>
+      <p class="muted" style="margin-bottom:18px;max-width:60ch">Boxes shipped from the US, grouped by expected arrival. When a box lands, press <b>Mark as arrived</b> and its products move to “In stock”.</p>
+      <div id="shipList" style="display:flex;flex-direction:column;gap:16px"></div>
+    </section>
+
+    <section data-tabpanel="orders" hidden>
+      <button class="btn-sm line" id="refreshOrders" style="float:right;margin-left:12px">Refresh</button><p class="muted" style="margin-bottom:18px;max-width:62ch">New orders appear here. Setting an order to <b>Confirmed</b> takes the items out of stock; <b>Cancelled</b> puts them back.</p>
+      <div id="orderList" style="display:flex;flex-direction:column;gap:14px"></div>
+    </section>
+  </div>
+</div>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-cols">
+      <div><span class="logo">halisi<i>.</i><small style="color:inherit;opacity:.7">beauty</small></span><span style="opacity:.75;max-width:30ch">Genuine US beauty, delivered in Kenya. Delivery-only for now.</span></div>
+      <div><b>Shop</b><button data-go="home" data-anchor="shop">All products</button><button data-go="home" data-anchor="brands">Brands</button><button data-go="home" data-anchor="faq">Request a product</button></div>
+      <div><b>Help</b><button data-go="home" data-anchor="delivery">Delivery &amp; M-Pesa</button><button data-go="home" data-anchor="genuine">Why genuine</button><button data-go="home" data-anchor="faq">FAQ</button></div>
+      <div><b>Talk to us</b><button data-toast="WhatsApp number to be added.">WhatsApp [NUMBER]</button><button data-toast="Instagram handle to be added.">Instagram [@HANDLE]</button><button data-toast="TikTok handle to be added.">TikTok [@HANDLE]</button></div>
+    </div>
+    <div class="foot-base"><span>© 2026 Halisi Beauty [WORKING NAME] · Kenya · <button class="link" id="ownerLogin" style="font-weight:500;color:inherit">Shop owner login</button><button class="link" id="logoutBtn" hidden style="font-weight:500;color:inherit">Log out</button></span><span>M-Pesa · Till [TILL NUMBER]</span></div>
+  </div>
+</footer>
+
+<div class="scrim" id="scrim" hidden></div>
+<aside class="drawer" id="drawer" hidden aria-label="Your bag">
+  <div class="drawer-head"><h2>Your bag</h2><button class="icon-btn" id="closeBag" aria-label="Close bag"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+  <div class="bag-list" id="bagList"></div>
+  <div class="totals" id="bagTotals"></div>
+  <button class="btn btn-accent" id="toCheckout">Checkout · Pay with M-Pesa</button>
+</aside>
+<div class="modal" id="modal" hidden role="dialog" aria-modal="true" aria-labelledby="sheetTitle"><div class="sheet" id="sheet"></div></div>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<script>
+/* Fallback catalogue: the Sept 2026 inventory. The live catalogue comes from the shop database. */
+const SNAPSHOT=[{"sku":"EOS-LOT-CW-473","brand":"EOS","product":"24H Moisture Body Lotion","variant":"Coconut Waters","size":"16 fl oz / 473 mL","ml":"473 mL","qty":1,"cat":"Body care","shape":"pump","c":["#7FD1D0","#F4FAF9","#FFFFFF","#2E9C9A","#DDF2F0"],"notes":"","cond":"New","price":null,"status":"in_stock","eta":null,"shippedOn":null,"photo":null},{"sku":"EOS-WASH-CW-473","brand":"EOS","product":"Cashmere Body Wash","variant":"Coconut Waters","size":"16 fl oz / 473 mL","ml":"473 mL","qty":3,"cat":"Shower","shape":"flip","c":["#7FD1D0","#F4FAF9","#FFFFFF","#2E9C9A","#DDF2F0"],"notes":"","cond":"New","price":null,"status":"in_stock","eta":null,"shippedOn":null,"photo":null},{"sku":"EOS-LOT-PR-473","brand":"EOS","product":"24H Moisture Body Lotion","variant":"Pomegranate Raspberry","size":"16 fl oz / 473 mL","ml":"473 mL","qty":1,"cat":"Body care","shape":"pump","c":["#C7285C","#F6E3EA","#FFF4F7","#8E1640","#F7DCE5"],"notes":"","cond":"New","price":null,"status":"in_stock","eta":null,"shippedOn":null,"photo":null},{"sku":"EOS-LOT-PC-473","brand":"EOS","product":"24H Moisture Body Lotion","variant":"Pink Champagne","size":"16 fl oz / 473 mL","ml":"473 mL","qty":4,"cat":"Body care","shape":"pump","c":["#F2B8C6","#FFF1F4","#FFFFFF","#C9637E","#FBE7EC"],"notes":"","cond":"New","price":null,"status":"in_stock","eta":null,"shippedOn":null,"photo":null},{"sku":"EOS-WASH-PC-473","brand":"EOS","product":"Cashmere Body Wash","variant":"Pink Champagne","size":"16 fl oz / 473 mL","ml":"473 mL","qty":5,"cat":"Shower","shape":"flip","c":["#F2B8C6","#FFF1F4","#FFFFFF","#C9637E","#FBE7EC"],"notes":"","cond":"New","price":null,"status":"in_stock","eta":null,"shippedOn":null,"photo":null},{"sku":"EOS-LOT-VC-473","brand":"EOS","product":"24H Moisture Body Lotion","variant":"Vanilla Cashmere","size":"16 fl oz / 473 mL","ml":"473 mL","qty":6,"cat":"Body care","shape":"pump","c":["#E9D3B4","#FBF4E9","#FFFDF8","#A9804C","#F5EBDD"],"notes":"","cond":"New","price":null,"status":"in_stock","eta":null,"shippedOn":null,"photo":null},{"sku":"EOS-LOT-FC-473","brand":"EOS","product":"24H Moisture Body Lotion","variant":"Fresh & Cozy","size":"16 fl oz / 473 mL","ml":"473 mL","qty":3,"cat":"Body care","shape":"pump","c":["#B9C3EA","#F1F3FC","#FFFFFF","#5D6BB3","#E5E9F8"],"notes":"","cond":"New","price":null,"status":"in_stock","eta":null,"shippedOn":null,"photo":null},{"sku":"EOS-WASH-FC-473","brand":"EOS","product":"Cashmere Body Wash","variant":"Fresh & Cozy","size":"16 fl oz / 473 mL","ml":"473 mL","qty":4,"cat":"Shower","shape":"flip","c":["#B9C3EA","#F1F3FC","#FFFFFF","#5D6BB3","#E5E9F8"],"notes":"","cond":"New","price":null,"status":"in_stock","eta":null,"shippedOn":null,"photo":null},{"sku":"EOS-LOT-JP-473","brand":"EOS","product":"24H Moisture Body Lotion","variant":"Jasmine Peach","size":"16 fl oz / 473 mL","ml":"473 mL","qty":2,"cat":"Body care","shape":"pump","c":["#F6B98E","#FFF1E6","#FFFFFF","#D07A3D","#FCE8D9"],"notes":"","cond":"New","price":null,"status":"in_stock","eta":null,"shippedOn":null,"photo":null},{"sku":"EOS-LOT-SD-473","brand":"EOS","product":"24H Moisture Body Lotion","variant":"Strawberry Dream","size":"16 fl oz / 473 mL","ml":"473 mL","qty":2,"cat":"Body care","shape":"pump","c":["#EE6F7B","#FFE9EB","#FFFFFF","#B8323F","#FCE0E2"],"notes":"","cond":"New","price":null,"status":"in_stock","eta":null,"shippedOn":null,"photo":null},{"sku":"EOS-WASH-VC-473","brand":"EOS","product":"Cashmere Body Wash","variant":"Vanilla Cashmere","size":"16 fl oz / 473 mL","ml":"473 mL","qty":5,"cat":"Shower","shape":"flip","c":["#E9D3B4","#FBF4E9","#FFFDF8","#A9804C","#F5EBDD"],"notes":"","cond":"New","price":null,"status":"in_stock","eta":null,"shippedOn":null,"photo":null},{"sku":"LUS-GP-DUO-1L","brand":"Luseta","product":"Glossy Pearl Shampoo & Conditioner Duo Pack","variant":"Glossy Pearl","size":"2 × 33.8 fl oz / 1 L","ml":"1 L","qty":1,"cat":"Hair","shape":"duo","c":["#EDE7F1","#C9B8D6","#FFFFFF","#8D72A6","#EFE9F4"],"notes":"Contains one shampoo and one conditioner; for all hair types","cond":"New","price":null,"status":"in_stock","eta":null,"shippedOn":null,"photo":null},{"sku":"LUS-KER-DUO-1L","brand":"Luseta","product":"Keratin Shampoo & Conditioner Duo Pack","variant":"Keratin","size":"2 × 33.8 fl oz / 1 L","ml":"1 L","qty":1,"cat":"Hair","shape":"duo","c":["#D8B26E","#2B2320","#FFF8EA","#8A6420","#F3E7CF"],"notes":"Contains one shampoo and one conditioner; for damaged and dry hair","cond":"New","price":null,"status":"in_stock","eta":null,"shippedOn":null,"photo":null},{"sku":"BYP-SG-ARG-1L","brand":"Byphasse","product":"Dermo Micellar Shower Gel","variant":"Argan","size":"33.8 fl oz / 1 L","ml":"1 L","qty":3,"cat":"Shower","shape":"pumpL","c":["#E8A33B","#5B3A1A","#FFF6E4","#9C5E12","#F7E4C3"],"notes":"Argan oil; pH neutral; suitable for all skin types","cond":"New","price":null,"status":"in_stock","eta":null,"shippedOn":null,"photo":null},{"sku":"DIF-RM-DUO-1L","brand":"Difeel","product":"Rosemary & Mint Shampoo & Conditioner Duo","variant":"Rosemary & Mint with Biotin","size":"2 × 33.8 fl oz / 1 L","ml":"1 L","qty":1,"cat":"Hair","shape":"duo","c":["#6FAE86","#1F4D35","#F4FBF6","#2E7250","#DCEFE2"],"notes":"Unboxed duo; contains one shampoo and one conditioner","cond":"New","price":null,"status":"in_stock","eta":null,"shippedOn":null,"photo":null},{"sku":"DIF-BAT-DUO-1L","brand":"Difeel","product":"Batana Shampoo & Conditioner Duo","variant":"Batana","size":"2 × 33.8 fl oz / 1 L","ml":"1 L","qty":1,"cat":"Hair","shape":"duo","c":["#8A5A3C","#E9D8C7","#FFF8F1","#5C3620","#EEDDCF"],"notes":"Unboxed sulfate-free duo; contains one shampoo and one conditioner","cond":"New","price":null,"status":"in_stock","eta":null,"shippedOn":null,"photo":null},{"sku":"LUS-CC-BW-1L","brand":"Luseta","product":"Citrus & Collagen Body Wash","variant":"Citrus & Collagen","size":"33.8 fl oz / 1 L","ml":"1 L","qty":1,"cat":"Shower","shape":"pumpL","c":["#F7C948","#F18A2A","#FFFDF2","#C36A12","#FCF0C8"],"notes":"Energizing and hydrating; free of sulfates, parabens and gluten; for all skin types","cond":"New","price":null,"status":"in_stock","eta":null,"shippedOn":null,"photo":null},{"sku":"LUS-SA-BW-1L","brand":"Luseta","product":"Shea Butter & Argan Oil Body Wash","variant":"Shea Butter & Argan Oil","size":"33.8 fl oz / 1 L","ml":"1 L","qty":4,"cat":"Shower","shape":"pumpL","c":["#E6CFA3","#8A6A3A","#FFFBF2","#8A6A3A","#F4EAD6"],"notes":"Hydrating and moisturizing; free of sulfates, parabens and gluten; for all skin types","cond":"New","price":null,"status":"in_stock","eta":null,"shippedOn":null,"photo":null},{"sku":"EOS-BUT-VC-283","brand":"EOS","product":"Cashmere Whipped Oil Butter","variant":"Vanilla Cashmere","size":"10 oz / 283 g","ml":"283 g","qty":3,"cat":"Body care","shape":"jar","c":["#E9D3B4","#FBF4E9","#FFFDF8","#A9804C","#F5EBDD"],"notes":"Shea Better body butter","cond":"New","price":null,"status":"in_stock","eta":null,"shippedOn":null,"photo":null},{"sku":"FEN-DC-RICH-340","brand":"Fenty Hair","product":"Moisture Repair Deep Conditioner","variant":"The Richer One","size":"11.5 fl oz / 340 mL","ml":"340 mL","qty":4,"cat":"Hair","shape":"tube","c":["#F1E6D8","#3B2F2A","#FFFFFF","#8C6B55","#EFE4D8"],"notes":"Deep conditioning moisture repair treatment","cond":"New","price":null,"status":"in_stock","eta":null,"shippedOn":null,"photo":null},{"sku":"EOS-OIL-VC-177","brand":"EOS","product":"Cashmere Body Oil","variant":"Vanilla Cashmere","size":"6 fl oz / 177 mL","ml":"177 mL","qty":3,"cat":"Body care","shape":"oil","c":["#E9D3B4","#FBF4E9","#FFFDF8","#A9804C","#F5EBDD"],"notes":"24-hour moisture; plant-based squalane","cond":"New","price":null,"status":"in_stock","eta":null,"shippedOn":null,"photo":null},{"sku":"DOV-DS-CE-107","brand":"Dove","product":"Advanced Care Dry Spray Antiperspirant Deodorant","variant":"Cool Essentials","size":"3.8 oz / 107 g","ml":"107 g","qty":4,"cat":"Deodorant","shape":"aerosol","c":["#9FD6E8","#EAF6FA","#FFFFFF","#2B7FA1","#DDF0F6"],"notes":"72-hour protection; pro-ceramide technology","cond":"New","price":null,"status":"in_stock","eta":null,"shippedOn":null,"photo":null},{"sku":"DOV-ST-BF-74","brand":"Dove","product":"Advanced Care Antiperspirant Deodorant Stick","variant":"Beauty Finish","size":"2.6 oz / 74 g","ml":"74 g","qty":1,"cat":"Deodorant","shape":"stick","c":["#F4C6D4","#FDF1F5","#FFFFFF","#C25A7D","#FBE6ED"],"notes":"72-hour protection; pro-ceramide technology","cond":"New","price":null,"status":"in_stock","eta":null,"shippedOn":null,"photo":null},{"sku":"DOV-ST-CC-74","brand":"Dove","product":"Advanced Care Antiperspirant Deodorant Stick","variant":"Caring Coconut","size":"2.6 oz / 74 g","ml":"74 g","qty":1,"cat":"Deodorant","shape":"stick","c":["#F3EEE4","#DCC9A8","#FFFFFF","#9B7A44","#F2EADC"],"notes":"72-hour protection; pro-ceramide technology","cond":"New","price":null,"status":"in_stock","eta":null,"shippedOn":null,"photo":null},{"sku":"DOV-ST-CE-74","brand":"Dove","product":"Advanced Care Antiperspirant Deodorant Stick","variant":"Cool Essentials","size":"2.6 oz / 74 g","ml":"74 g","qty":2,"cat":"Deodorant","shape":"stick","c":["#9FD6E8","#EAF6FA","#FFFFFF","#2B7FA1","#DDF0F6"],"notes":"72-hour protection; pro-ceramide technology","cond":"New","price":null,"status":"in_stock","eta":null,"shippedOn":null,"photo":null},{"sku":"DOV-ST-RP-74","brand":"Dove","product":"Advanced Care Antiperspirant Deodorant Stick","variant":"Rose Petals","size":"2.6 oz / 74 g","ml":"74 g","qty":1,"cat":"Deodorant","shape":"stick","c":["#E9A3B6","#FCEFF3","#FFFFFF","#B2466A","#F9E1E8"],"notes":"72-hour protection; pro-ceramide technology","cond":"New","price":null,"status":"in_stock","eta":null,"shippedOn":null,"photo":null},{"sku":"DOV-ST-OC-74","brand":"Dove","product":"Antiperspirant Deodorant Stick","variant":"Original Clean","size":"2.6 oz / 74 g","ml":"74 g","qty":1,"cat":"Deodorant","shape":"stick","c":["#FFFFFF","#D7E3EE","#FFFFFF","#2F5E8C","#E4ECF3"],"notes":"48-hour sweat and odor protection; moisturizers","cond":"New","price":null,"status":"in_stock","eta":null,"shippedOn":null,"photo":null},{"sku":"DOV-ST-SC-74","brand":"Dove","product":"Advanced Care Antiperspirant Deodorant Stick","variant":"Sheer Cool","size":"2.6 oz / 74 g","ml":"74 g","qty":1,"cat":"Deodorant","shape":"stick","c":["#BFE3EC","#F2FAFC","#FFFFFF","#3C8AA3","#E0F1F5"],"notes":"72-hour protection; no white marks on 100 colors","cond":"New","price":null,"status":"in_stock","eta":null,"shippedOn":null,"photo":null},{"sku":"LUS-TTA-SH-1L","brand":"Luseta","product":"Tea Tree & Argan Oil Shampoo","variant":"Tea Tree & Argan Oil","size":"33.8 fl oz / 1 L","ml":"1 L","qty":2,"cat":"Hair","shape":"pumpL","c":["#5DA57F","#EAF4EE","#F6FBF8","#2B6B4A","#DDEEE4"],"notes":"Clarify and repair formula; color safe; for damaged and oily hair","cond":"New","price":null,"status":"in_stock","eta":null,"shippedOn":null,"photo":null},{"sku":"LUS-RMC-SH-1L","brand":"Luseta","product":"Rosemary Mint Complex Strengthening Shampoo","variant":"Rosemary Mint Complex","size":"33.8 fl oz / 1 L","ml":"1 L","qty":2,"cat":"Hair","shape":"pumpL","c":["#7FB89A","#20563C","#F4FBF7","#2F6F4F","#DFF0E6"],"notes":"Infused with rosemary, peppermint, biotin and argan oil; color safe; for all hair types","cond":"New","price":null,"status":"in_stock","eta":null,"shippedOn":null,"photo":null},{"sku":"BBW-FFM-CC-236","brand":"Bath & Body Works","product":"Fine Fragrance Mist","variant":"Country Chic","size":"8 fl oz / 236 mL","ml":"236 mL","qty":1,"cat":"Fragrance","shape":"mist","c":["#E8C48E","#C9A06A","#FFF9EF","#9A6B2D","#F6EAD6"],"notes":"Dermatologist tested; for body and hair","cond":"New","price":null,"status":"in_stock","eta":null,"shippedOn":null,"photo":null},{"sku":"BBW-FFM-OS-236","brand":"Bath & Body Works","product":"Fine Fragrance Mist","variant":"Open Sky","size":"8 fl oz / 236 mL","ml":"236 mL","qty":3,"cat":"Fragrance","shape":"mist","c":["#9EC3E6","#E6EFF8","#FFFFFF","#3A6E9E","#E1ECF7"],"notes":"Dermatologist tested; for body and hair","cond":"New","price":null,"status":"in_stock","eta":null,"shippedOn":null,"photo":null},{"sku":"BBW-BW-FM-295","brand":"Bath & Body Works","product":"Body Wash","variant":"Fresh Musk","size":"10 fl oz / 295 mL","ml":"295 mL","qty":1,"cat":"Shower","shape":"flip","c":["#D9DDE4","#9AA3B2","#FFFFFF","#5A6477","#E9ECF1"],"notes":"Dermatologist tested; with pro-vitamin B5, aloe and vitamin E","cond":"New","price":null,"status":"in_stock","eta":null,"shippedOn":null,"photo":null},{"sku":"BBW-FFM-WM-236","brand":"Bath & Body Works","product":"Fine Fragrance Mist","variant":"Warm Musk","size":"8 fl oz / 236 mL","ml":"236 mL","qty":1,"cat":"Fragrance","shape":"mist","c":["#C69A7A","#8C5E44","#FFF7F1","#7A4A30","#F1E1D5"],"notes":"Dermatologist tested; for body and hair","cond":"New","price":null,"status":"in_stock","eta":null,"shippedOn":null,"photo":null},{"sku":"DIF-RM-LCS-267","brand":"Difeel","product":"Leave-In Conditioning Spray","variant":"Rosemary & Mint with Biotin","size":"9 fl oz / 267 mL","ml":"267 mL","qty":1,"cat":"Hair","shape":"spray","c":["#6FAE86","#1F4D35","#F4FBF6","#2E7250","#DCEFE2"],"notes":"Helps prevent breakage, promote growth and repair split ends","cond":"New","price":null,"status":"in_stock","eta":null,"shippedOn":null,"photo":null},{"sku":"HAI-CON-RICH-300","brand":"Hairitage","product":"Moisture Repair Conditioner","variant":"The Rich One","size":"10 fl oz / 300 mL","ml":"300 mL","qty":3,"cat":"Hair","shape":"tube","c":["#EADFD2","#4A3A33","#FFFFFF","#8C6B55","#EFE6DC"],"notes":"Moisture repair conditioner","cond":"New","price":null,"status":"in_stock","eta":null,"shippedOn":null,"photo":null},{"sku":"LUS-CM-BW-1L","brand":"Luseta","product":"Coconut Milk Body Wash","variant":"Coconut Milk","size":"33.8 fl oz / 1 L","ml":"1 L","qty":1,"cat":"Shower","shape":"pumpL","c":["#F4F0E6","#BFA98A","#FFFFFF","#8C7355","#EFE9DD"],"notes":"Nourishing and moisturizing formula; for all skin types","cond":"New","price":null,"status":"in_stock","eta":null,"shippedOn":null,"photo":null},{"sku":"LUS-HA-BW-1L","brand":"Luseta","product":"Hyaluronic Acid Body Wash","variant":"Hyaluronic Acid","size":"33.8 fl oz / 1 L","ml":"1 L","qty":1,"cat":"Shower","shape":"pumpL","c":["#BCD9F0","#EAF3FB","#FFFFFF","#3E7CB0","#E2EEF8"],"notes":"Hydrating and smoothing formula; for all skin types","cond":"New","price":null,"status":"in_stock","eta":null,"shippedOn":null,"photo":null},{"sku":"LUS-LC-BW-1L","brand":"Luseta","product":"Lavender & Collagen Body Wash","variant":"Lavender & Collagen","size":"33.8 fl oz / 1 L","ml":"1 L","qty":2,"cat":"Shower","shape":"pumpL","c":["#B9A2DA","#EFE8F8","#FFFFFF","#6A4E9C","#ECE4F6"],"notes":"Soothing and hydrating formula; for all skin types","cond":"New","price":null,"status":"in_stock","eta":null,"shippedOn":null,"photo":null},{"sku":"LUS-CP-BW-1L","brand":"Luseta","product":"Collagen Peptides Body Wash","variant":"Collagen Peptides","size":"33.8 fl oz / 1 L","ml":"1 L","qty":1,"cat":"Shower","shape":"pumpL","c":["#F2C4B6","#FBEDE8","#FFFFFF","#B8664F","#F9E5DE"],"notes":"Rejuvenating and hydrating formula; for all skin types","cond":"New","price":null,"status":"in_stock","eta":null,"shippedOn":null,"photo":null},{"sku":"SHM-GM-CV-800","brand":"Shower Mate","product":"Goat Milk Body Wash","variant":"Coconut & Vanilla","size":"27.05 fl oz / 800 mL","ml":"800 mL","qty":1,"cat":"Shower","shape":"pumpL","c":["#F1E7D3","#6B4A2E","#FFFCF5","#8C6A3E","#F3EADB"],"notes":"Hydrating goat milk body wash","cond":"New","price":null,"status":"in_stock","eta":null,"shippedOn":null,"photo":null},{"sku":"SHM-GM-MH-800","brand":"Shower Mate","product":"Goat Milk Body Wash","variant":"Manuka Honey","size":"27.05 fl oz / 800 mL","ml":"800 mL","qty":1,"cat":"Shower","shape":"pumpL","c":["#E6B04A","#6B4A1E","#FFF8E6","#9C6A12","#F6E6C2"],"notes":"Nourishing goat milk body wash","cond":"New","price":null,"status":"in_stock","eta":null,"shippedOn":null,"photo":null},{"sku":"CIR-VI-SG-1L","brand":"Ciroa","product":"Vanilla-icious Shower Gel","variant":"Vanilla, Brown Sugar & Amber","size":"33.8 fl oz / 1 L","ml":"1 L","qty":1,"cat":"Shower","shape":"pumpL","c":["#D9A36A","#F5E3CC","#FFF6EA","#8E5A2A","#F3E2CE"],"notes":"Australian-owned brand; shimmer shower gel","cond":"New","price":null,"status":"in_stock","eta":null,"shippedOn":null,"photo":null},{"sku":"DOV-REF-CGT-BW-591","brand":"Dove","product":"Refresh Body Wash","variant":"Cucumber & Green Tea","size":"20 fl oz / 591 mL","ml":"591 mL","qty":2,"cat":"Shower","shape":"flip","c":["#BFE0A4","#EDF7E4","#FFFFFF","#4F8A2E","#E4F2DA"],"notes":"24-hour renewing moisture","cond":"New","price":null,"status":"in_stock","eta":null,"shippedOn":null,"photo":null}];
+const INVENTORY_DATE="4 Sep 2026";
+const TRANSIT_DAYS=91; /* US → Kenya usually takes about 3 months */
+/* Delivery zones — fill in fees (numbers, KSh) and times. */
+let ZONES=[
+  {id:"cbd",name:"Nairobi CBD & Upper Hill",how:"Rider",when:"[SAME DAY]",fee:null},
+  {id:"nbo",name:"Rest of Nairobi",how:"Rider",when:"[SAME / NEXT DAY]",fee:null},
+  {id:"env",name:"Nairobi environs — Kiambu, Ruiru, Thika Rd, Kitengela, Syokimau, Ngong, Rongai",how:"Rider",when:"[NEXT DAY]",fee:null},
+  {id:"ctry",name:"Rest of Kenya",how:"Courier / parcel office [COURIER]",when:"[1–3 DAYS]",fee:null}
+];
+const CATS=["Body care","Shower","Hair","Deodorant","Fragrance"];
+const SHAPES=[["pump","Pump bottle"],["pumpL","Large pump bottle (1 L)"],["flip","Flip-cap bottle"],["duo","Shampoo + conditioner duo"],["jar","Jar / tub"],["tube","Squeeze tube"],["oil","Body oil bottle"],["aerosol","Spray can"],["stick","Deodorant stick"],["mist","Fragrance mist"],["spray","Spray bottle"]];
+const SHAPE_KEYS=SHAPES.map(s=>s[0]);
+const FEATURED=["EOS|24H Moisture Body Lotion","EOS|Cashmere Body Wash","Fenty Hair|Moisture Repair Deep Conditioner","Bath & Body Works|Fine Fragrance Mist","EOS|Cashmere Whipped Oil Butter","Luseta|Shea Butter & Argan Oil Body Wash","Dove|Advanced Care Antiperspirant Deodorant Stick","EOS|Cashmere Body Oil"];
+
+/* ---------- helpers ---------- */
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const slug=s=>s.toLowerCase().replace(/&/g,"and").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
+const HEX=/^#[0-9a-f]{6}$/i;
+function mix(hex,amt){const n=parseInt(hex.slice(1),16);let r=n>>16,g=(n>>8)&255,b=n&255;const t=amt<0?0:255,p=Math.abs(amt);r=Math.round(r+(t-r)*p);g=Math.round(g+(t-g)*p);b=Math.round(b+(t-b)*p);return"#"+((1<<24)|(r<<16)|(g<<8)|b).toString(16).slice(1)}
+function palette(body){return[body,mix(body,.6),"#FFFFFF",mix(body,-.45),mix(body,.78)]}
+const today=()=>new Date().toISOString().slice(0,10);
+function addDays(d,n){const x=new Date(d+"T00:00:00");x.setDate(x.getDate()+n);return x.toISOString().slice(0,10)}
+const dLong=d=>d?new Date(d+"T00:00:00").toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"numeric"}):"[DATE]";
+const dShort=d=>d?new Date(d+"T00:00:00").toLocaleDateString("en-GB",{day:"numeric",month:"short"}):"[DATE]";
+const fmt=n=>"KSh "+Math.round(n).toLocaleString("en-KE");
+
+function norm(d){
+  const i={};
+  i.sku=String(d.sku||"");i.brand=String(d.brand||"");i.product=String(d.product||"");i.variant=String(d.variant||"");
+  i.size=String(d.size||"");i.ml=String(d.ml||i.size.split("/").pop()||"").trim();
+  i.qty=Math.max(0,Math.floor(Number(d.qty)||0));
+  i.price=typeof d.price==="number"&&d.price>0?d.price:null;
+  i.cat=CATS.includes(d.cat)?d.cat:"Body care";
+  i.shape=SHAPE_KEYS.includes(d.shape)?d.shape:"pumpL";
+  i.c=Array.isArray(d.c)&&d.c.length===5&&d.c.every(x=>HEX.test(x))?d.c:palette(HEX.test(d.color)?d.color:"#E9D3B4");
+  i.notes=String(d.notes||"");i.cond=String(d.cond||"New");
+  i.status=["in_stock","on_the_way","hidden"].includes(d.status)?d.status:"in_stock";
+  i.eta=/^\d{4}-\d{2}-\d{2}$/.test(d.eta||"")?d.eta:null;
+  i.shippedOn=/^\d{4}-\d{2}-\d{2}$/.test(d.shippedOn||"")?d.shippedOn:null;
+  i.photo=/^https:\/\/[a-z0-9-]+\.public\.blob\.vercel-storage\.com\//.test(d.photo||"")?d.photo:null;
+  i.createdAt=d.createdAt||"";
+  return i;
+}
+
+/* ---------- catalogue ---------- */
+let ITEMS=SNAPSHOT.map(norm),BY={},GROUPS=[],GBY={},GID={};
+function rebuild(){
+  BY={};ITEMS.forEach(i=>BY[i.sku]=i);
+  GROUPS=[];GBY={};GID={};
+  ITEMS.filter(i=>i.status!=="hidden"&&i.sku).forEach(i=>{
+    const otw=i.status==="on_the_way",k=i.brand+"|"+i.product+(otw?"|otw":"");
+    if(!GBY[k]){const g={id:slug(k)||i.sku.toLowerCase(),key:k,bp:i.brand+"|"+i.product,brand:i.brand,product:i.product,cat:i.cat,otw,skus:[]};GBY[k]=g;GROUPS.push(g);GID[g.id]=g}
+    GBY[k].skus.push(i.sku);
+  });
+}
+rebuild();
+const inStockGroups=()=>GROUPS.filter(g=>!g.otw);
+const stockOf=g=>g.skus.reduce((a,s)=>a+BY[s].qty,0);
+const priceOf=sku=>BY[sku]?.price??null;
+const priceText=sku=>{const p=priceOf(sku);return p==null?"KSh [PRICE]":fmt(p)};
+function groupPrice(g){const ps=g.skus.map(priceOf);if(ps.some(p=>p==null))return "KSh [PRICE]";const mn=Math.min(...ps),mx=Math.max(...ps);return mn===mx?fmt(mn):fmt(mn)+" – "+fmt(mx)}
+const groupEta=g=>g.skus.map(s=>BY[s].eta).filter(Boolean).sort()[0]||null;
+function stockInfo(q,it){
+  if(it&&it.status==="on_the_way")return q>0?["Arriving ~"+dShort(it.eta),"otw"]:["Pre-orders full","out"];
+  if(q<=0)return["Sold out","out"];if(q===1)return["Last one","low"];if(q<=3)return["Only "+q+" left","low"];return[q+" in stock",""];
+}
+function defaultSku(g){return g.skus.slice().sort((a,b)=>BY[b].qty-BY[a].qty)[0]}
+
+/* ---------- product renders (SVG) or real photos ---------- */
+let uid=0;
+function cyl(id,c,k=1){k*=.55;return `<linearGradient id="${id}" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="${mix(c,-.30*k)}"/><stop offset=".14" stop-color="${mix(c,-.06*k)}"/><stop offset=".34" stop-color="${mix(c,.32*k)}"/><stop offset=".52" stop-color="${c}"/><stop offset=".86" stop-color="${mix(c,-.12*k)}"/><stop offset="1" stop-color="${mix(c,-.34*k)}"/></linearGradient>`}
+function labelBlock(x,y,w,h,id,acc,txt,sub){
+  const cx=x+w/2;
+  return `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="5" fill="url(#${id}l)"/><rect x="${x}" y="${y+10}" width="${w}" height="5" fill="${acc}" opacity=".85"/>`+
+  `<circle cx="${cx}" cy="${y+h*0.42}" r="${Math.min(w,h)*0.13}" fill="none" stroke="${acc}" stroke-width="2.5"/><circle cx="${cx}" cy="${y+h*0.42}" r="${Math.min(w,h)*0.05}" fill="${acc}"/>`+
+  (sub?`<text x="${cx}" y="${y+h-30}" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="8.5" font-weight="600" letter-spacing="1.2" fill="${acc}">${sub}</text>`:"")+
+  `<rect x="${cx-w*0.3}" y="${y+h-24}" width="${w*0.6}" height="1.5" fill="${acc}" opacity=".5"/><text x="${cx}" y="${y+h-9}" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="${w<70?9.5:11}" font-weight="600" fill="${acc}">${txt}</text>`}
+function hl(x,y,h,w=7,o=.38){return `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${w/2}" fill="#fff" opacity="${o}"/>`}
+const SH={
+ pump(id,c,t,big,sub){const top=big?112:132,hf=big?58:52,L=150-hf,R=150+hf;
+  return `<path d="M${L} ${top+24}Q${L} ${top} ${L+24} ${top}L${R-24} ${top}Q${R} ${top} ${R} ${top+24}L${R} 304Q${R} 318 ${R-14} 318L${L+14} 318Q${L} 318 ${L} 304Z" fill="url(#${id}b)"/><rect x="128" y="${top-22}" width="44" height="26" rx="4" fill="url(#${id}c)"/><rect x="145" y="${top-46}" width="10" height="26" fill="${mix(c[1],-.15)}"/><rect x="124" y="${top-62}" width="44" height="18" rx="6" fill="url(#${id}c)"/><rect x="88" y="${top-58}" width="42" height="9" rx="4.5" fill="${mix(c[1],-.08)}"/>`+
+  labelBlock(L+10,top+52,2*hf-20,318-top-92,id,c[3],t,sub)+hl(L+11,top+16,318-top-34)},
+ flip(id,c,t){return `<path d="M112 318L188 318Q202 318 202 304L202 134Q202 98 170 94L130 94Q98 98 98 134L98 304Q98 318 112 318Z" fill="url(#${id}b)"/><rect x="114" y="54" width="72" height="44" rx="10" fill="url(#${id}c)"/><rect x="114" y="68" width="72" height="2" fill="${mix(c[1],-.25)}"/>`+labelBlock(108,158,84,124,id,c[3],t)+hl(108,112,190)},
+ jar(id,c,t){return `<rect x="74" y="226" width="152" height="92" rx="16" fill="url(#${id}b)"/><rect x="64" y="182" width="172" height="48" rx="12" fill="url(#${id}c)"/>`+[196,206,216].map(y=>`<rect x="66" y="${y}" width="168" height="1.5" fill="${mix(c[1],-.18)}" opacity=".6"/>`).join("")+
+  `<rect x="74" y="244" width="152" height="56" fill="url(#${id}l)"/><rect x="74" y="250" width="152" height="4" fill="${c[3]}" opacity=".85"/><text x="150" y="286" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="12" font-weight="600" fill="${c[3]}">${t}</text>`+hl(84,236,74,7,.35)},
+ tube(id,c,t){return `<path d="M94 74L206 74Q198 200 180 282L120 282Q102 200 94 74Z" fill="url(#${id}b)"/><rect x="90" y="52" width="120" height="24" rx="3" fill="${mix(c[0],-.08)}"/>`+[58,64,70].map(y=>`<rect x="92" y="${y}" width="116" height="1.2" fill="${mix(c[0],-.25)}"/>`).join("")+`<rect x="114" y="278" width="72" height="40" rx="7" fill="url(#${id}c)"/>`+labelBlock(116,112,68,112,id,c[3],t)+hl(110,86,160)},
+ oil(id,c,t){return `<path d="M120 150Q120 128 138 124L162 124Q180 128 180 150L180 304Q180 318 166 318L134 318Q120 318 120 304Z" fill="url(#${id}b)" opacity=".95"/><rect x="138" y="100" width="24" height="28" fill="${mix(c[1],-.1)}"/><rect x="130" y="58" width="40" height="46" rx="9" fill="url(#${id}c)"/>`+labelBlock(126,178,48,108,id,c[3],t)+hl(126,146,160,5)},
+ aerosol(id,c,t){return `<rect x="108" y="108" width="84" height="210" rx="10" fill="url(#${id}b)"/><ellipse cx="150" cy="110" rx="42" ry="12" fill="${mix(c[0],-.2)}"/><rect x="114" y="52" width="72" height="60" rx="12" fill="url(#${id}c)" opacity=".92"/>`+labelBlock(108,164,84,118,id,c[3],t)+`<rect x="108" y="306" width="84" height="12" rx="4" fill="${mix(c[0],-.25)}"/>`+hl(118,120,184,6)},
+ stick(id,c,t){return `<rect x="104" y="146" width="92" height="172" rx="26" fill="url(#${id}b)"/><rect x="104" y="92" width="92" height="66" rx="26" fill="url(#${id}c)"/><rect x="104" y="150" width="92" height="3" fill="${mix(c[1],-.25)}"/>`+labelBlock(114,178,72,106,id,c[3],t)+hl(114,104,200,6)},
+ mist(id,c,t){return `<rect x="114" y="102" width="72" height="216" rx="12" fill="url(#${id}b)" opacity=".92"/><rect x="124" y="48" width="52" height="58" rx="16" fill="url(#${id}c)"/>`+labelBlock(120,166,60,116,id,c[3],t)+hl(122,112,196,6)},
+ spray(id,c,t){return `<rect x="106" y="124" width="88" height="194" rx="18" fill="url(#${id}b)"/><rect x="136" y="104" width="28" height="24" fill="${mix(c[1],-.1)}"/><rect x="128" y="64" width="44" height="44" rx="10" fill="url(#${id}c)"/><rect x="164" y="76" width="14" height="7" rx="3" fill="${mix(c[1],-.2)}"/>`+labelBlock(114,168,72,116,id,c[3],t)+hl(114,136,168,6)}
+};
+function render(x,bare){
+  const it=typeof x==="string"?BY[x]:x;if(!it)return"";
+  const c=it.c,id="r"+(uid++);
+  const ml=esc(it.ml.replace("2 × ","").replace(" fl oz","")).slice(0,14);
+  const small=/^\d+ mL$/.test(it.ml)&&parseInt(it.ml)<350&&it.shape==="flip";
+  let body;
+  if(it.shape==="duo"){
+    const bottle=(cx,sub,s)=>`<g transform="translate(${cx} 318) scale(.74) translate(-150 -318)">${SH.pump(id+s,s==="a"?c:[mix(c[0],.25),c[1],c[2],c[3]],ml,true,sub)}</g>`;
+    body=bottle(104,"SHAMPOO","a")+bottle(198,"CONDITIONER","b");
+  }else{
+    const inner=SH[it.shape==="pumpL"?"pump":it.shape](id,c,ml,it.shape==="pumpL");
+    body=small?`<g transform="translate(150 318) scale(.86) translate(-150 -318)">${inner}</g>`:inner;
+  }
+  const defs=["","a","b"].map(s=>{const b0=s==="b"?mix(c[0],.25):c[0];return cyl(id+s+"b",b0)+cyl(id+s+"c",c[1],.9)+cyl(id+s+"l",c[2],.35)}).join("");
+  if(bare)return `<svg viewBox="${({pumpL:"84 46 128 274",pump:"84 66 122 254",flip:"94 50 112 270",mist:"110 44 80 276",tube:"86 48 128 272",stick:"100 88 100 232",aerosol:"104 48 92 272",spray:"102 60 96 260",oil:"116 54 68 266",jar:"60 178 180 142",duo:"20 40 260 280"})[it.shape]}" aria-hidden="true"><defs>${defs}</defs>${body}</svg>`;
+  return `<svg viewBox="0 0 300 360" role="img" aria-label="${esc(it.brand+" "+it.product+" — "+it.variant+", "+it.size)} (illustration)"><defs>${defs}<radialGradient id="${id}s"><stop offset="0" stop-color="#000" stop-opacity=".28"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient></defs>`+
+  `<rect width="300" height="360" fill="${c[4]}"/><circle cx="190" cy="150" r="118" fill="${mix(c[4],.5)}"/><rect y="318" width="300" height="42" fill="${mix(c[4],-.04)}"/><ellipse cx="150" cy="320" rx="${it.shape==="duo"?118:it.shape==="jar"?96:72}" ry="10" fill="url(#${id}s)"/>${body}</svg>`;
+}
+function visual(x,src){
+  const it=typeof x==="string"?BY[x]:x;if(!it)return"";
+  const url=src||it.photo;
+  return url?`<img class="ph" src="${esc(url)}" alt="${esc(it.brand+" "+it.product+" — "+it.variant)}" loading="lazy" style="background:${it.c[4]}">`:render(it);
+}
+
+/* ---------- state ---------- */
+let bag=[];try{bag=JSON.parse(localStorage.getItem("halisi-bag")||"[]")}catch(e){bag=[]}
+const saveBag=()=>{try{localStorage.setItem("halisi-bag",JSON.stringify(bag))}catch(e){}};
+let filt={cat:"All",brand:"All",q:"",sort:"feat"};
+let cur=null,curSku=null,qty=1,toastT,view="home";
+let isAdmin=false,dbLive=false,ORDERS=[],adminKey="";
+try{adminKey=sessionStorage.getItem("halisi-admin")||""}catch(e){}
+const API=location.protocol.startsWith("http");
+async function api(path,opts={}){
+  const h={"Content-Type":"application/json"};if(adminKey)h["x-admin-key"]=adminKey;
+  const r=await fetch(path,{method:opts.body?"POST":"GET",headers:h,body:opts.body?JSON.stringify(opts.body):undefined,cache:"no-store"});
+  let j={};try{j=await r.json()}catch(e){}
+  if(!r.ok){const err=new Error(j.error||"Something went wrong — try again.");err.status=r.status;throw err}
+  return j;
+}
+function setProducts(list){ITEMS=list.map(norm);afterData()}
+
+/* ---------- home ---------- */
+function facts(){
+  const live=ITEMS.filter(i=>i.status==="in_stock");
+  const units=live.reduce((a,i)=>a+i.qty,0),brands=new Set(live.map(i=>i.brand)).size;
+  $("#facts").textContent=`${live.length} products · ${brands} US brands · ${units} units in Kenya right now`;
+  let picks=["EOS-LOT-VC-473","BBW-FFM-OS-236","FEN-DC-RICH-340","DOV-ST-RP-74"].filter(s=>BY[s]&&BY[s].status==="in_stock");
+  if(picks.length<4)picks=[...new Set([...picks,...live.slice().sort((a,b)=>b.qty-a.qty).map(i=>i.sku)])].slice(0,4);
+  $("#manifestRow").innerHTML=picks.map(s=>{const i=BY[s],g=GBY[i.brand+"|"+i.product];return `<button data-product="${g.id}" data-sku="${esc(s)}" aria-label="${esc(i.brand+" "+i.product+" — "+i.variant)}">${render(i,true)}</button>`}).join("");
+}
+function card(g){
+  const s=defaultSku(g),it=BY[s],q=stockOf(g),[st,cls]=stockInfo(q,it),n=g.skus.length;
+  const dots=n>1?`<div class="dots">${g.skus.slice(0,7).map(k=>`<i style="background:${BY[k].c[0]}"></i>`).join("")}<em>${n} ${g.cat==="Hair"?"types":"scents"}</em></div>`:`<div class="dots"><em>${esc(it.variant)}</em></div>`;
+  return `<button class="card" data-product="${g.id}"><div class="r">${visual(s)}<span class="badge ${cls}">${esc(st)}</span></div><div><div class="card-brand">${esc(g.brand)}</div><div class="card-name">${esc(g.product)}</div></div>${dots}<div class="card-meta"><b>${groupPrice(g)}</b><span class="muted">${esc(it.ml)}</span></div></button>`;
+}
+function renderCats(){
+  const gs=inStockGroups(),cnt=c=>c==="All"?gs.length:gs.filter(g=>g.cat===c).length;
+  $("#cats").innerHTML=["All",...CATS].map(c=>`<button data-cat="${c}" aria-pressed="${filt.cat===c}">${c}<span>${cnt(c)}</span></button>`).join("");
+}
+function matchQ(g,q){return !q||g.skus.some(s=>{const i=BY[s];return(i.brand+" "+i.product+" "+i.variant+" "+i.cat+" "+i.notes).toLowerCase().includes(q)})}
+function renderGrid(){
+  const q=filt.q.trim().toLowerCase();
+  let gs=inStockGroups().filter(g=>(filt.cat==="All"||g.cat===filt.cat)&&(filt.brand==="All"||g.brand===filt.brand)&&matchQ(g,q));
+  const fi=g=>{const k=FEATURED.indexOf(g.bp);return k<0?99:k};
+  if(filt.sort==="feat")gs.sort((a,b)=>fi(a)-fi(b));
+  if(filt.sort==="az")gs.sort((a,b)=>(a.brand+a.product).localeCompare(b.brand+b.product));
+  if(filt.sort==="stock")gs.sort((a,b)=>stockOf(b)-stockOf(a));
+  if(filt.sort==="low")gs.sort((a,b)=>stockOf(a)-stockOf(b));
+  $("#grid").innerHTML=gs.length?gs.map(card).join(""):`<p class="empty" style="grid-column:1/-1">Nothing matches that yet. <button class="link" id="clearF">Clear filters</button> or request it below.</p>`;
+  $("#resCount").textContent=gs.length+(gs.length===1?" product":" products");
+}
+function renderComing(){
+  const gs=GROUPS.filter(g=>g.otw).sort((a,b)=>(groupEta(a)||"9").localeCompare(groupEta(b)||"9"));
+  $("#coming").hidden=!gs.length;
+  $("#comingGrid").innerHTML=gs.map(card).join("");
+  const first=gs.length?groupEta(gs[0]):null;
+  $("#comingLead").textContent=first?`Next box lands around ${dLong(first)}. Shipping from the US takes about 3 months — pre-order now and it’s yours as soon as it arrives.`:"";
+}
+function renderBrands(){
+  const live=ITEMS.filter(i=>i.status==="in_stock"),bs=[...new Set(live.map(i=>i.brand))].sort((a,b)=>live.filter(i=>i.brand===b).length-live.filter(i=>i.brand===a).length);
+  const sel=$("#brandSel").value||"All";
+  $("#brandSel").innerHTML=`<option value="All">All brands</option>`+bs.map(b=>`<option>${esc(b)}</option>`).join("");
+  $("#brandSel").value=bs.includes(sel)?sel:"All";
+  $("#brandsEyebrow").textContent=bs.length+" US brands";
+  $("#brandGrid").innerHTML=bs.map(b=>{const its=live.filter(i=>i.brand===b),u=its.reduce((a,i)=>a+i.qty,0);return `<button data-brand="${esc(b)}"><b>${esc(b)}</b><span>${its.length} product${its.length>1?"s":""} · ${u} in stock</span></button>`}).join("");
+}
+function renderZones(){
+  $("#zonesBody").innerHTML=ZONES.map(z=>`<tr><td>${esc(z.name)}</td><td>${esc(z.how)}</td><td>${esc(z.when)}</td><td><b>${z.fee==null?"KSh [FEE]":fmt(z.fee)}</b></td></tr>`).join("");
+  $("#coZone").innerHTML=`<option value="">Choose your area</option>`+ZONES.map(z=>`<option value="${z.id}">${esc(z.name)} — ${z.fee==null?"KSh [FEE]":fmt(z.fee)}</option>`).join("");
+}
+function renderHome(){facts();renderCats();renderBrands();renderGrid();renderComing()}
+
+/* ---------- views ---------- */
+function show(v,anchor){
+  view=v;
+  document.querySelectorAll("[data-view]").forEach(el=>el.hidden=el.dataset.view!==v);
+  closeBag();
+  if(v==="admin")renderAdmin();
+  if(anchor){requestAnimationFrame(()=>{const el=document.getElementById(anchor);if(el)el.scrollIntoView({behavior:"smooth",block:"start"})});return}
+  window.scrollTo({top:0});
+}
+function openProduct(gid,sku){
+  const g=GID[gid];if(!g)return;
+  cur=g;curSku=sku&&g.skus.includes(sku)?sku:defaultSku(g);qty=1;
+  fillPdpFrame();renderPdp();show("product");
+}
+function fillPdpFrame(){
+  $("#crumbCat").textContent=cur.otw?"Arriving soon":cur.cat;$("#crumbCat").dataset.anchor=cur.otw?"coming":"shop";
+  $("#crumbName").textContent=cur.product;$("#pdpBrand").textContent=cur.brand;$("#pdpName").textContent=cur.product;
+  $("#variantWrap").hidden=cur.skus.length<2;
+  const others=GROUPS.filter(g=>g!==cur&&!g.otw&&(g.brand===cur.brand||g.cat===cur.cat)).sort((a,b)=>(b.brand===cur.brand)-(a.brand===cur.brand)).slice(0,4);
+  $("#moreTitle").textContent="You might also like";$("#moreGrid").innerHTML=others.map(card).join("");
+}
+function inBag(sku){const l=bag.find(x=>x.sku===sku);return l?l.qty:0}
+function renderPdp(){
+  const it=BY[curSku],otw=it.status==="on_the_way",left=it.qty-inBag(curSku),[st,cls]=stockInfo(it.qty,it);
+  $("#pdpImg").innerHTML=visual(curSku);
+  $("#pdpPrice").textContent=priceText(curSku);
+  const s=$("#pdpStock");s.textContent=otw?"On the way · arrives ~"+dLong(it.eta):st;s.className="stock "+cls;
+  $("#pdpPre").hidden=!otw;
+  $("#pdpPre").innerHTML=otw?`<b>Pre-order.</b> This is on its way from the US and should land around <b>${dLong(it.eta)}</b>. Order now and we deliver it as soon as it arrives. [PRE-ORDER PAYMENT RULE — e.g. full payment or 50% deposit by M-Pesa]`:"";
+  $("#variantName").textContent=it.variant;
+  $("#variants").innerHTML=cur.skus.map(k=>{const v=BY[k];return `<button class="variant${v.qty<=0?" sold":""}" data-sku="${esc(k)}" aria-pressed="${k===curSku}"><i style="background:${v.c[0]}"></i>${esc(v.variant)}</button>`}).join("");
+  qty=Math.max(1,Math.min(qty,Math.max(left,1)));
+  $("#qOut").textContent=qty;$("#qMinus").disabled=qty<=1;$("#qPlus").disabled=qty>=left;
+  const b=$("#addBtn");b.disabled=it.qty>0&&left<=0;
+  b.textContent=it.qty<=0?(otw?"Pre-orders full — request more":"Sold out — request it"):left<=0?"All in your bag":otw?"Pre-order":"Add to bag";
+  const rows=[["Size",it.size],["Scent / type",it.variant],["Condition",it.cond+", sealed"],["Category",it.cat]];
+  if(otw)rows.push(["Arrives","About "+dLong(it.eta)]);
+  if(it.notes)rows.push(["About",it.notes]);
+  rows.push(["SKU",it.sku]);
+  $("#specs").innerHTML=rows.map(([k,v])=>`<dt>${k}</dt><dd>${esc(v)}</dd>`).join("");
+  $("#photoNote").textContent=it.photo?"This is a photo of the actual item we have in stock.":"This is an illustration of the pack shape and scent colour. [REPLACE WITH A REAL PHOTO — add one in Manage shop.]";
+}
+
+/* ---------- bag ---------- */
+function totals(zoneId){
+  const sub=bag.length&&bag.every(l=>priceOf(l.sku)!=null)?bag.reduce((a,l)=>a+priceOf(l.sku)*l.qty,0):bag.length?null:0;
+  const z=ZONES.find(z=>z.id===zoneId),fee=z?z.fee:undefined;
+  return{sub,fee,z,total:sub!=null&&typeof fee==="number"?sub+fee:null};
+}
+const count=()=>bag.reduce((a,l)=>a+l.qty,0);
+function lineItem(l,editable){
+  const i=BY[l.sku],pre=i.status==="on_the_way";
+  return `<div class="line-item"><div class="r">${visual(l.sku)}</div><div><b>${esc(i.brand)} ${esc(i.product)}</b><small>${esc(i.variant)} · ${esc(i.ml)}</small>${pre?`<small style="color:var(--transit);font-weight:600">Pre-order · arrives ~${dShort(i.eta)}</small>`:""}${editable?`<div class="qty"><button data-dec="${esc(l.sku)}" aria-label="Fewer" ${l.qty<=1?"disabled":""}>−</button><output>${l.qty}</output><button data-inc="${esc(l.sku)}" aria-label="More" ${l.qty>=i.qty?"disabled":""}>+</button></div>`:`<small>Qty ${l.qty}</small>`}</div><div class="price">${priceOf(l.sku)==null?"[PRICE]":fmt(priceOf(l.sku)*l.qty)}${editable?`<button data-remove="${esc(l.sku)}">Remove</button>`:""}</div></div>`;
+}
+function cleanBag(){bag=bag.filter(l=>BY[l.sku]&&BY[l.sku].status!=="hidden"&&BY[l.sku].qty>0).map(l=>({sku:l.sku,qty:Math.min(l.qty,BY[l.sku].qty)}))}
+function renderBag(){
+  cleanBag();
+  $("#bagCount").textContent=count();
+  $("#bagList").innerHTML=bag.length?bag.map(l=>lineItem(l,true)).join(""):`<p class="empty">Your bag is empty.<br><button class="link" data-go="home" data-anchor="shop">Start shopping</button></p>`;
+  const t=totals();
+  $("#bagTotals").innerHTML=`<div><span>Subtotal · ${count()} item${count()===1?"":"s"}</span><b>${t.sub==null?"KSh [SUBTOTAL]":fmt(t.sub)}</b></div><div class="muted"><span>Delivery</span><span>Added at checkout</span></div>`;
+  $("#toCheckout").disabled=!bag.length;
+  saveBag();
+}
+function openBag(){$("#drawer").hidden=false;$("#scrim").hidden=false;$("#closeBag").focus()}
+function closeBag(){$("#drawer").hidden=true;$("#scrim").hidden=true}
+function add(sku,n){const l=bag.find(x=>x.sku===sku),max=BY[sku].qty;if(l)l.qty=Math.min(max,l.qty+n);else bag.push({sku,qty:Math.min(max,n)});renderBag()}
+
+/* ---------- checkout ---------- */
+function renderCheckout(){
+  const zone=$("#coZone").value,t=totals(zone);
+  $("#coItems").innerHTML=bag.map(l=>lineItem(l,false)).join("");
+  const feeTxt=!t.z?"Choose your area":t.fee==null?"KSh [FEE]":fmt(t.fee);
+  const totTxt=t.total!=null?fmt(t.total):"KSh [TOTAL]";
+  $("#coTotals").innerHTML=`<div><span>Subtotal</span><span>${t.sub==null?"KSh [SUBTOTAL]":fmt(t.sub)}</span></div><div><span>Delivery</span><span>${feeTxt}</span></div><div class="grand"><span>Total</span><span>${totTxt}</span></div>`;
+  const pre=bag.filter(l=>BY[l.sku].status==="on_the_way");
+  $("#coPre").hidden=!pre.length;
+  if(pre.length){const last=pre.map(l=>BY[l.sku].eta).filter(Boolean).sort().pop();$("#coPre").innerHTML=`<b>${pre.length} pre-order item${pre.length>1?"s":""}</b> in this order. They’re still on the way from the US and arrive around ${dLong(last)}. We deliver everything together then, unless you ask us to split it. [PRE-ORDER PAYMENT RULE]`}
+  $("#tillAmt").textContent=totTxt;
+  const pay=document.querySelector("input[name=pay]:checked").value;
+  $("#tillBox").hidden=pay!=="till";
+  $("#payBtn").textContent=pay==="stk"?"Pay "+totTxt+" with M-Pesa":pay==="till"?"Confirm payment & place order":"Place order · pay on delivery";
+  $("#locHint").textContent=zone==="ctry"?"· or your nearest courier office":"";
+  return t;
+}
+function normPhone(v){const d=String(v).replace(/[\s-]/g,"");const m=d.match(/^(?:\+?254|0)([17]\d{8})$/);return m?"0"+m[1]:null}
+function setErr(id,msg){const f=$("#"+id);if(!f)return;const e=f.querySelector(".err");f.classList.toggle("bad",!!msg);if(e){e.hidden=!msg;e.textContent=msg||""}}
+function validate(){
+  let ok=true;const chk=(id,msg)=>{setErr(id,msg);if(msg&&ok){ok=false;const i=$("#"+id+" input,#"+id+" select");i&&i.focus()}};
+  chk("f-name",$("#coName").value.trim()?"":"Enter the name we should deliver to.");
+  chk("f-phone",normPhone($("#coPhone").value)?"":"Enter a Safaricom number like 0712 345 678.");
+  chk("f-zone",$("#coZone").value?"":"Choose your delivery area.");
+  chk("f-loc",$("#coLoc").value.trim()?"":"Tell us where to deliver — estate, street or building.");
+  const pay=document.querySelector("input[name=pay]:checked").value;
+  if(pay==="pod"&&$("#coZone").value==="ctry")chk("f-zone","Pay on delivery is Nairobi only. Choose M-Pesa prompt or Till.");
+  if(pay==="till")chk("f-code",/^[A-Z0-9]{10}$/i.test($("#coCode").value.trim())?"":"Enter the 10-character code from your M-Pesa SMS.");else setErr("f-code","");
+  return ok;
+}
+function sheet(html){$("#sheet").innerHTML=html;$("#modal").hidden=false;const b=$("#sheet button");b&&b.focus()}
+function closeSheet(){$("#modal").hidden=true}
+let stkTimer;
+function startStk(){
+  const ph=normPhone($("#coPhone").value),t=renderCheckout(),amt=t.total!=null?fmt(t.total):"KSh [TOTAL]";
+  sheet(`<div class="spinner" aria-hidden="true"></div><h2 id="sheetTitle">Sending M-Pesa prompt…</h2><p>To ${ph}</p><p class="tiny">Prototype — no real prompt is sent.</p>`);
+  clearTimeout(stkTimer);
+  stkTimer=setTimeout(()=>sheet(`<div class="phone" aria-hidden="true"><span class="pin">PIN ••••</span></div><h2 id="sheetTitle">Check your phone</h2><p>Enter your M-Pesa PIN to pay <b style="color:var(--ink)">${amt}</b> to <b style="color:var(--ink)">[M-PESA BUSINESS NAME]</b>.</p><div class="btns"><button class="btn btn-accent" data-sheet="paid">I’ve entered my PIN</button><button class="btn btn-line" data-sheet="till">No prompt? Pay to Till instead</button><button class="link" data-sheet="cancel" style="padding:8px">Cancel</button></div><p class="tiny">Prototype — tap “I’ve entered my PIN” to simulate a successful payment.</p>`),1300);
+}
+async function placeOrder(method){
+  const t=renderCheckout(),ph=normPhone($("#coPhone").value),z=t.z,code=$("#coCode").value.trim().toUpperCase();
+  const no="HB-"+today().slice(2).replace(/-/g,"")+"-"+String(Math.floor(1000+Math.random()*9000));
+  const lines=bag.map(l=>{const i=BY[l.sku];return{sku:l.sku,qty:l.qty,price:priceOf(l.sku),label:`${i.brand} ${i.product} — ${i.variant} (${i.ml})`,preorder:i.status==="on_the_way"}});
+  const order={no,createdAt:new Date().toISOString(),name:$("#coName").value.trim(),phone:ph,zone:z?z.name:"",loc:$("#coLoc").value.trim(),landmark:$("#coLandmark").value.trim(),when:$("#coWhen").value,notes:$("#coNotes").value.trim(),pay:method,code:method==="till"?code:"",items:lines,subtotal:t.sub,fee:typeof t.fee==="number"?t.fee:null,total:t.total,status:"new",stockTaken:false};
+  let saved=false,no2=no;
+  if(API){
+    try{const r=await api("/api/orders",{body:{name:order.name,phone:ph,zoneId:z?z.id:"",loc:order.loc,landmark:order.landmark,when:order.when,notes:order.notes,pay:method,code:order.code,items:bag.map(l=>({sku:l.sku,qty:l.qty}))}});no2=r.order.no;saved=true}
+    catch(e){closeSheet();toast(e.message);return}
+  }
+  const items=bag.map(l=>lineItem(l,false)).join("");
+  const payTxt=method==="stk"?"Paid by M-Pesa prompt":method==="till"?"Paid to Till · code "+esc(code):"M-Pesa on delivery";
+  $("#doneBody").innerHTML=`<div class="tick"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></div>
+   <div><div class="eyebrow">Order ${no2}</div><h1>Asante, ${esc(order.name.split(" ")[0])}! Your order is in.</h1></div>
+   <p class="muted" style="font-size:17px">We’ll WhatsApp you on <b style="color:var(--ink)">${ph}</b> to confirm your delivery time${z?` (${esc(z.when)})`:""}.${method==="till"?" We’ll check your M-Pesa code first.":""}${lines.some(l=>l.preorder)?" Pre-order items come as soon as the shipment lands.":""}</p>
+   <div class="receipt"><div class="kv"><span>Payment</span><b>${payTxt}</b></div><div class="kv"><span>Deliver to</span><span>${esc(order.loc)}${z?", "+esc(z.name.split(" — ")[0]):""}</span></div><div class="kv"><span>Best time</span><span>${esc(order.when)}</span></div>
+   <div style="display:flex;flex-direction:column;gap:12px;border-top:1px dashed var(--line);padding-top:12px">${items}</div><div class="totals" style="border-top:1px dashed var(--line)"><div class="grand"><span>Total</span><span>${t.total!=null?fmt(t.total):"KSh [TOTAL]"}</span></div></div></div>
+   <p class="tiny muted" style="font-size:13px">Prototype — no money moved.${saved?"":" (Offline preview — order not sent.)"}</p>
+   <div class="ctas"><button class="btn btn-ink" data-go="home" data-anchor="shop">Keep shopping</button></div>`;
+  bag=[];renderBag();closeSheet();show("done");
+}
+
+/* ---------- admin ---------- */
+let editing=null,etaTouched=false,pFile=null,pFileUrl=null,adminTab="products";
+const dirty=new Set();
+function renderAdmin(){
+  if(view!=="admin")return;
+  $("#admMode").textContent=!API?"Offline preview — open the live site to save changes.":dbLive?"Changes save straight to the live shop. Customers see them on their next visit.":"Storage isn’t connected yet — add a Blob store in Vercel before saving.";
+  const live=ITEMS.filter(i=>i.status==="in_stock"),otw=ITEMS.filter(i=>i.status==="on_the_way"),noPrice=ITEMS.filter(i=>i.status!=="hidden"&&i.price==null).length,newO=ORDERS.filter(o=>o.status==="new").length;
+  $("#admStats").innerHTML=`<div class="stat"><b>${live.reduce((a,i)=>a+i.qty,0)}</b><span>units in stock · ${live.length} products</span></div><div class="stat"><b>${otw.reduce((a,i)=>a+i.qty,0)}</b><span>units on the way · ${otw.length} products</span></div><div class="stat ${noPrice?"warn":""}"><b>${noPrice}</b><span>products without a price</span></div><div class="stat"><b>${newO}</b><span>new orders</span></div>`;
+  $("#nOtw").textContent=otw.length||"";$("#nOrders").textContent=newO||"";
+  document.querySelectorAll("[data-tab]").forEach(b=>b.setAttribute("aria-selected",b.dataset.tab===adminTab));
+  document.querySelectorAll("[data-tabpanel]").forEach(p=>p.hidden=p.dataset.tabpanel!==adminTab);
+  renderAdminList();renderShipments();renderOrders();
+  $("#brandList").innerHTML=[...new Set(ITEMS.map(i=>i.brand))].map(b=>`<option value="${esc(b)}">`).join("");
+}
+function statusOpts(v){return[["in_stock","In stock"],["on_the_way","On the way"],["hidden","Hidden"]].map(([k,l])=>`<option value="${k}" ${k===v?"selected":""}>${l}</option>`).join("")}
+function renderAdminList(){
+  const keep={};dirty.forEach(s=>{const r=document.querySelector(`[data-row="${CSS.escape(s)}"]`);if(r)keep[s]={status:r.querySelector("[data-f=status]").value,qty:r.querySelector("[data-f=qty]").value,price:r.querySelector("[data-f=price]").value}});
+  const q=$("#aq").value.trim().toLowerCase(),sf=$("#aStatus").value,pf=$("#aPrice").value;
+  const rows=ITEMS.filter(i=>(sf==="all"||i.status===sf)&&(pf==="all"||i.price==null)&&(!q||(i.brand+" "+i.product+" "+i.variant+" "+i.sku).toLowerCase().includes(q)))
+    .sort((a,b)=>(a.status==="hidden")-(b.status==="hidden")||(a.brand+a.product+a.variant).localeCompare(b.brand+b.product+b.variant));
+  $("#aList").innerHTML=rows.length?rows.map(i=>{const k=keep[i.sku],id=slug(i.sku);return `<div class="arow${i.status==="hidden"?" hid":""}${k?" dirty":""}" data-row="${esc(i.sku)}">
+    <div class="thumb r">${visual(i)}</div>
+    <div class="ainfo"><b>${esc(i.brand)} ${esc(i.product)}</b><small>${esc(i.variant)} · ${esc(i.size)}${i.status==="on_the_way"?` · <span style="color:var(--transit)">arrives ~${dShort(i.eta)}</span>`:""}</small><span class="mono muted">${esc(i.sku)}</span></div>
+    <div class="aedit"><label class="afield"><span>Status</span><select id="a-${id}-st" data-f="status">${statusOpts(k?k.status:i.status)}</select></label><label class="afield"><span>Qty</span><input id="a-${id}-q" data-f="qty" type="number" min="0" step="1" inputmode="numeric" value="${esc(k?k.qty:i.qty)}"></label><label class="afield"><span>Price (KSh)</span><input id="a-${id}-p" data-f="price" type="number" min="0" step="10" inputmode="numeric" placeholder="Not set" value="${esc(k?k.price:(i.price??""))}"></label></div>
+    <div class="aact"><button class="btn-sm" data-save="${esc(i.sku)}" ${k?"":"disabled"}>Save</button><button class="btn-sm line" data-edit="${esc(i.sku)}">Edit</button></div></div>`}).join(""):`<p class="empty">No products match.</p>`;
+}
+async function saveRow(sku){
+  const r=document.querySelector(`[data-row="${CSS.escape(sku)}"]`),st=r.querySelector("[data-f=status]").value,qv=r.querySelector("[data-f=qty]").value,pv=r.querySelector("[data-f=price]").value;
+  const q=Math.max(0,Math.floor(Number(qv)||0)),p=pv===""?null:Math.max(0,Math.round(Number(pv)));
+  const btn=r.querySelector("[data-save]");btn.disabled=true;btn.textContent="Saving…";
+  try{const res=await api("/api/admin/products",{body:{action:"patch",sku,patch:{status:st,qty:q,price:p&&p>0?p:null}}});dirty.delete(sku);setProducts(res.products);toast("Saved "+BY[sku].variant)}
+  catch(e){btn.disabled=false;btn.textContent="Save";adminErr(e)}
+}
+function adminErr(e){if(e.status===401){logout();toast("Your session ended — enter the password again.")}else toast(e.message)}
+/* product form */
+function fillSelects(){
+  $("#pCat").innerHTML=CATS.map(c=>`<option>${c}</option>`).join("");
+  $("#pShape").innerHTML=SHAPES.map(([k,l])=>`<option value="${k}">${l}</option>`).join("");
+}
+function formItem(){
+  const size=$("#pSize").value.trim(),st=document.querySelector("input[name=pStatus]:checked").value,base=editing?BY[editing]:null,color=$("#pColor").value;
+  return norm({sku:editing||"NEW",brand:$("#pBrand").value.trim()||"Brand",product:$("#pProduct").value.trim()||"Product name",variant:$("#pVariant").value.trim()||"Scent",size:size||"Size",
+    qty:$("#pQty").value,price:$("#pPrice").value?Number($("#pPrice").value):null,cat:$("#pCat").value,shape:$("#pShape").value,
+    c:base&&base.c[0].toLowerCase()===color.toLowerCase()?base.c:palette(color),notes:$("#pNotes").value.trim(),status:st,eta:$("#pEta").value,shippedOn:$("#pShipped").value,
+    photo:base&&!$("#pRmPhoto").checked?base.photo:null});
+}
+function renderPreview(){
+  const it=formItem(),[st,cls]=stockInfo(it.qty,it);
+  $("#otwFields").hidden=it.status!=="on_the_way";
+  $("#pPreview").innerHTML=`<div class="r" style="border-radius:18px;overflow:hidden">${visual(it,pFileUrl)}<span class="badge ${cls}">${esc(st)}</span></div><div><div class="card-brand">${esc(it.brand)}</div><div class="card-name">${esc(it.product)}</div></div><div class="dots"><em>${esc(it.variant)}</em></div><div class="card-meta"><b>${it.price?fmt(it.price):"KSh [PRICE]"}</b><span class="muted">${esc(it.ml)}</span></div>`;
+}
+function resetForm(){
+  editing=null;etaTouched=false;pFile=null;if(pFileUrl)URL.revokeObjectURL(pFileUrl);pFileUrl=null;
+  $("#pForm").reset();$("#pQty").value=1;$("#pColor").value="#E9D3B4";$("#pShape").value="pumpL";
+  $("#pShipped").value=today();$("#pEta").value=addDays(today(),TRANSIT_DAYS);
+  $("#pFormTitle").textContent="Add a product";$("#pSave").textContent="Add to shop";$("#tabAddBtn").textContent="Add product";
+  $("#pCancel").hidden=true;$("#pDelete").hidden=true;$("#rmPhotoWrap").hidden=true;
+  ["f-pBrand","f-pProduct","f-pVariant","f-pSize","f-pQty","f-pEta"].forEach(i=>setErr(i,""));
+  renderPreview();
+}
+function editProduct(sku){
+  const i=BY[sku];if(!i)return;resetForm();editing=sku;
+  $("#pBrand").value=i.brand;$("#pProduct").value=i.product;$("#pVariant").value=i.variant;$("#pSize").value=i.size;$("#pCat").value=i.cat;$("#pNotes").value=i.notes;
+  $("#pQty").value=i.qty;$("#pPrice").value=i.price??"";$("#pShape").value=i.shape;$("#pColor").value=i.c[0];
+  document.querySelector(`input[name=pStatus][value=${i.status==="hidden"?"in_stock":i.status}]`).checked=true;
+  $("#pShipped").value=i.shippedOn||"";$("#pEta").value=i.eta||addDays(today(),TRANSIT_DAYS);etaTouched=!!i.eta;
+  $("#pFormTitle").textContent="Edit product";$("#pSave").textContent="Save changes";$("#tabAddBtn").textContent="Edit product";
+  $("#pCancel").hidden=false;$("#pDelete").hidden=false;$("#rmPhotoWrap").hidden=!i.photo;
+  adminTab="add";renderAdmin();renderPreview();window.scrollTo({top:0});
+}
+function makeSku(b,p,v){
+  const ini=s=>s.replace(/&/g," ").split(/[^A-Za-z0-9]+/).filter(Boolean).map(w=>w[0]).join("").toUpperCase().slice(0,4)||"X";
+  const base=(b.replace(/[^A-Za-z0-9]/g,"").slice(0,3).toUpperCase()||"HB")+"-"+ini(p)+"-"+ini(v);
+  let s=base,n=2;while(BY[s])s=base+"-"+(n++);return s;
+}
+function shrink(file){return new Promise((res,rej)=>{const img=new Image(),u=URL.createObjectURL(file);img.onload=()=>{const m=1400,k=Math.min(1,m/Math.max(img.width,img.height)),c=document.createElement("canvas");c.width=Math.round(img.width*k);c.height=Math.round(img.height*k);c.getContext("2d").drawImage(img,0,0,c.width,c.height);URL.revokeObjectURL(u);c.toBlob(b=>b?res(b):rej(new Error("encode")),"image/jpeg",.86)};img.onerror=()=>{URL.revokeObjectURL(u);rej(new Error("decode"))};img.src=u})}
+async function saveProduct(){
+  let ok=true;const need=(id,el,msg)=>{const bad=!$(el).value.trim();setErr(id,bad?msg:"");if(bad&&ok){ok=false;$(el).focus()}};
+  need("f-pBrand","#pBrand","Enter the brand.");need("f-pProduct","#pProduct","Enter the product name.");need("f-pVariant","#pVariant","Enter the scent or type — or “Original”.");need("f-pSize","#pSize","Enter the size from the pack.");
+  const q=Number($("#pQty").value);if(!(q>=0)){setErr("f-pQty","Enter how many you have (0 or more).");ok=false}else setErr("f-pQty","");
+  const st=document.querySelector("input[name=pStatus]:checked").value;
+  if(st==="on_the_way"&&!$("#pEta").value){setErr("f-pEta","Add the expected arrival date.");ok=false}else setErr("f-pEta","");
+  if(!ok)return;
+  if(!API){toast("Open the live site to save products.");return}
+  const btn=$("#pSave"),label=btn.textContent;btn.disabled=true;btn.textContent="Saving…";
+  try{
+    const it=formItem(),base=editing?BY[editing]:null,sku=editing||makeSku(it.brand,it.product,it.variant);
+    let photo=base&&!$("#pRmPhoto").checked?base.photo:null;
+    if(pFile){
+      let blob;try{blob=await shrink(pFile)}catch(e){toast("Couldn’t read that photo — try a JPG or PNG.");return}
+      btn.textContent="Uploading photo…";
+      const data=await new Promise((res,rej)=>{const fr=new FileReader();fr.onload=()=>res(String(fr.result).split(",")[1]);fr.onerror=rej;fr.readAsDataURL(blob)});
+      photo=(await api("/api/admin/photo",{body:{type:"image/jpeg",data}})).url;
+    }
+    const doc={sku,brand:it.brand,product:it.product,variant:it.variant,size:it.size,ml:it.ml,qty:it.qty,price:it.price,cat:it.cat,shape:it.shape,c:it.c,notes:it.notes,
+      status:base&&base.status==="hidden"&&st==="in_stock"?"hidden":st,
+      eta:st==="on_the_way"?$("#pEta").value:(base?base.eta:null),shippedOn:st==="on_the_way"?($("#pShipped").value||null):(base?base.shippedOn:null),photo};
+    const res=await api("/api/admin/products",{body:{action:"upsert",product:doc}});
+    setProducts(res.products);
+    toast(editing?"Saved changes":`Added ${doc.variant} to the shop`);
+    resetForm();adminTab=st==="on_the_way"?"otw":"products";renderAdmin();window.scrollTo({top:0});
+  }catch(e){adminErr(e)}
+  finally{btn.disabled=false;if(btn.textContent.endsWith("…"))btn.textContent=label}
+}
+function askDelete(){
+  const i=BY[editing];if(!i)return;
+  sheet(`<h2 id="sheetTitle">Delete this product?</h2><p>${esc(i.brand)} ${esc(i.product)} — ${esc(i.variant)} will be removed for good${i.photo?", with its photo":""}. To just take it off the shop for now, set its status to Hidden instead.</p><div class="btns"><button class="btn btn-line" data-sheet="cancel">Keep it</button><button class="btn btn-accent" data-sheet="delete" style="background:var(--danger);color:#fff">Delete product</button></div>`);
+}
+async function doDelete(){
+  const i=BY[editing];closeSheet();if(!i||!API)return;
+  try{const res=await api("/api/admin/products",{body:{action:"delete",sku:i.sku}});setProducts(res.products);toast("Deleted");resetForm();adminTab="products";renderAdmin()}catch(e){adminErr(e)}
+}
+/* shipments */
+function renderShipments(){
+  const otw=ITEMS.filter(i=>i.status==="on_the_way"),by={};
+  otw.forEach(i=>{(by[i.eta||"none"]=by[i.eta||"none"]||[]).push(i)});
+  const keys=Object.keys(by).sort();
+  $("#shipList").innerHTML=keys.length?keys.map(k=>{
+    const its=by[k],shipped=its.map(i=>i.shippedOn).filter(Boolean).sort()[0],units=its.reduce((a,i)=>a+i.qty,0);
+    const start=shipped?new Date(shipped+"T00:00"):null,end=k!=="none"?new Date(k+"T00:00"):null,now=new Date();
+    const pct=start&&end&&end>start?Math.max(3,Math.min(100,(now-start)/(end-start)*100)):8,days=end?Math.ceil((end-now)/864e5):null;
+    return `<div class="ship"><div class="ship-head"><div><div class="mono muted">Arriving around</div><h3>${k==="none"?"Date not set":dLong(k)}</h3></div><button class="btn-sm" data-arrived="${k}">Mark as arrived</button></div>
+      <div class="bar" role="img" aria-label="${Math.round(pct)}% of the way"><i style="width:${pct}%"></i></div>
+      <div class="mono muted">${shipped?"Shipped "+dLong(shipped)+" · ":""}${days==null?"":days>0?days+" days to go · ":"Due now · "}${units} units · ${its.length} products</div>
+      <ul>${its.map(i=>`<li><span>${esc(i.brand)} ${esc(i.product)} — ${esc(i.variant)}</span><span><b>${i.qty}</b> · <button class="link" data-edit="${esc(i.sku)}">Edit</button></span></li>`).join("")}</ul></div>`}).join("")
+    :`<div class="ship"><h3>Nothing on the way right now</h3><p class="muted">When you ship a box from the US, add each product with status <b>On the way</b> and the date it left. It shows to customers under “Arriving soon” so they can pre-order.</p><button class="btn-sm" data-tabgo="add" style="align-self:flex-start">Add a product on the way</button></div>`;
+}
+async function markArrived(k){
+  if(!API){toast("Open the live site to save changes.");return}
+  try{const res=await api("/api/admin/products",{body:{action:"arrive",eta:k}});setProducts(res.products);toast("Moved to In stock. Pre-orders are in the Orders tab.")}catch(e){adminErr(e)}
+}
+/* orders */
+const ORDER_ST=[["new","New"],["confirmed","Confirmed"],["out","Out for delivery"],["delivered","Delivered"],["cancelled","Cancelled"]];
+function renderOrders(){
+  if(!API){$("#orderList").innerHTML=`<p class="empty">Orders appear here on the live site.</p>`;return}
+  $("#orderList").innerHTML=ORDERS.length?ORDERS.map(o=>{o.id=o.no;const items=Array.isArray(o.items)?o.items:[];return `<div class="order">
+    <div class="order-head"><b>${esc(o.no||o.id)}</b><span class="st ${esc(o.status)}">${esc((ORDER_ST.find(s=>s[0]===o.status)||["","New"])[1])}</span></div>
+    <div class="kv"><span>Placed</span><span>${o.createdAt?new Date(o.createdAt).toLocaleString("en-GB",{day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"}):""}</span><span>Customer</span><span>${esc(o.name)} · <a href="tel:${esc(o.phone)}">${esc(o.phone)}</a></span><span>Deliver to</span><span>${esc(o.loc)}${o.landmark?" ("+esc(o.landmark)+")":""} · ${esc(o.zone)}</span><span>When</span><span>${esc(o.when)}${o.notes?" · “"+esc(o.notes)+"”":""}</span><span>Payment</span><span>${o.pay==="stk"?"M-Pesa prompt":o.pay==="till"?"Till · code "+esc(o.code):"M-Pesa on delivery"} · ${typeof o.total==="number"?fmt(o.total):"total not set"}</span></div>
+    <ul>${items.map(l=>`<li>${l.qty} × ${esc(l.label)}${l.preorder?' <span style="color:var(--transit);font-weight:600">· pre-order</span>':""}</li>`).join("")}</ul>
+    <label class="afield" style="max-width:260px"><span>Order status</span><select data-order="${esc(o.id)}" id="o-${esc(o.id)}">${ORDER_ST.map(([k,l])=>`<option value="${k}" ${k===o.status?"selected":""}>${l}</option>`).join("")}</select></label></div>`}).join("")
+    :`<p class="empty">No orders yet. They’ll show up here as soon as someone checks out.</p>`;
+}
+async function setOrderStatus(id,st){
+  try{const r=await api("/api/admin/orders",{body:{no:id,status:st}});const i=ORDERS.findIndex(o=>o.no===id);if(i>=0)ORDERS[i]=r.order;if(r.products)setProducts(r.products);else renderAdmin();
+    toast(st==="cancelled"&&r.products?"Cancelled — items back in stock":r.products?"Confirmed — stock updated":"Order updated")}
+  catch(e){adminErr(e);renderAdmin()}
+}
+/* ---------- live data ---------- */
+function afterData(){
+  rebuild();cleanBag();renderHome();renderBag();
+  if(view==="product"&&curSku){if(BY[curSku]&&BY[curSku].status!=="hidden"){const i=BY[curSku];cur=GBY[i.brand+"|"+i.product+(i.status==="on_the_way"?"|otw":"")];fillPdpFrame();renderPdp()}else show("home","shop")}
+  if(view==="checkout")renderCheckout();
+  renderAdmin();
+}
+async function loadProducts(){
+  if(!API)return;
+  try{const r=await api("/api/products");if(Array.isArray(r.zones)&&r.zones.length){ZONES=r.zones;renderZones()}dbLive=!!r.live;if(adminKey&&!r.admin){logout()}setProducts(r.products)}
+  catch(e){console.warn("Using the built-in catalogue:",e.message)}
+}
+async function loadOrders(){
+  if(!API||!isAdmin)return;
+  try{ORDERS=(await api("/api/admin/orders")).orders;renderAdmin()}catch(e){if(e.status===401)logout();else console.warn(e.message)}
+}
+function setAdmin(on){
+  isAdmin=on;document.querySelectorAll(".adm-link").forEach(b=>b.hidden=!on);
+  $("#logoutBtn").hidden=!on;$("#ownerLogin").hidden=on;
+}
+function logout(){adminKey="";try{sessionStorage.removeItem("halisi-admin")}catch(e){}setAdmin(false);ORDERS=[];if(view==="admin")show("home")}
+function askLogin(){
+  if(!API){toast("Open the live site to manage the shop.");return}
+  sheet(`<h2 id="sheetTitle">Shop owner login</h2><p>Enter the shop password to add products and see orders.</p><form id="loginForm" style="display:flex;flex-direction:column;gap:10px;width:100%" novalidate><div class="field" style="text-align:left"><label for="adminPw">Password</label><input id="adminPw" type="password" autocomplete="current-password"></div><p class="err" id="loginErr" hidden></p><div class="btns"><button class="btn btn-accent" type="submit">Log in</button><button class="link" type="button" data-sheet="cancel" style="padding:8px">Cancel</button></div></form>`);
+  $("#adminPw").focus();
+}
+async function doLogin(pw){
+  adminKey=pw;
+  try{await api("/api/admin/login",{body:{}});try{sessionStorage.setItem("halisi-admin",pw)}catch(e){}closeSheet();setAdmin(true);await loadProducts();loadOrders();show("admin")}
+  catch(e){adminKey="";const el=$("#loginErr");if(el){el.hidden=false;el.textContent=e.status===401?"That password isn’t right.":e.message}}
+}
+async function connect(){
+  await loadProducts();
+  if(adminKey){try{await api("/api/admin/login",{body:{}});setAdmin(true);await loadProducts();loadOrders()}catch(e){logout()}}
+  if(location.hash==="#manage"&&!isAdmin)askLogin();
+  setInterval(()=>{if(document.visibilityState!=="visible")return;if(isAdmin&&view==="admin")loadOrders();else if(view==="home")loadProducts()},60000);
+}
+
+/* ---------- events ---------- */
+function toast(m){const t=$("#toast");t.textContent=m;t.hidden=false;clearTimeout(toastT);toastT=setTimeout(()=>t.hidden=true,3000)}
+document.addEventListener("click",e=>{
+  const t=e.target.closest("[data-go],[data-product],[data-toast],[data-cat],[data-brand],[data-sku],[data-inc],[data-dec],[data-remove],[data-sheet],[data-tab],[data-tabgo],[data-save],[data-edit],[data-arrived],#clearF");if(!t)return;
+  if(t.id==="clearF"){filt={...filt,cat:"All",brand:"All",q:""};$("#q").value="";$("#brandSel").value="All";renderCats();renderGrid();return}
+  if(t.dataset.product){openProduct(t.dataset.product,t.dataset.sku);return}
+  if(t.dataset.sku&&t.classList.contains("variant")){curSku=t.dataset.sku;qty=1;renderPdp();return}
+  if(t.dataset.go){show(t.dataset.go,t.dataset.anchor);return}
+  if(t.dataset.toast){toast(t.dataset.toast);return}
+  if(t.dataset.cat){filt.cat=t.dataset.cat;renderCats();renderGrid();return}
+  if(t.dataset.brand){filt.brand=t.dataset.brand;filt.cat="All";$("#brandSel").value=filt.brand;renderCats();renderGrid();show("home","shop");return}
+  if(t.dataset.inc){add(t.dataset.inc,1);return}
+  if(t.dataset.dec){const l=bag.find(x=>x.sku===t.dataset.dec);if(l&&l.qty>1){l.qty--;renderBag()}return}
+  if(t.dataset.remove){bag=bag.filter(x=>x.sku!==t.dataset.remove);renderBag();return}
+  if(t.dataset.tab){adminTab=t.dataset.tab;if(adminTab==="orders")loadOrders();if(adminTab==="add"&&!editing)resetForm();renderAdmin();return}
+  if(t.dataset.tabgo){adminTab=t.dataset.tabgo;resetForm();document.querySelector("input[name=pStatus][value=on_the_way]").checked=true;renderPreview();renderAdmin();return}
+  if(t.dataset.save){saveRow(t.dataset.save);return}
+  if(t.dataset.edit){editProduct(t.dataset.edit);return}
+  if(t.dataset.arrived){markArrived(t.dataset.arrived);return}
+  if(t.dataset.sheet){const a=t.dataset.sheet;
+    if(a==="paid"){sheet(`<div class="spinner" aria-hidden="true"></div><h2 id="sheetTitle">Confirming payment…</h2>`);setTimeout(()=>placeOrder("stk"),1100)}
+    if(a==="till"){closeSheet();document.querySelector("input[name=pay][value=till]").checked=true;renderCheckout();$("#coCode").focus()}
+    if(a==="cancel"){clearTimeout(stkTimer);closeSheet();if(view==="checkout")toast("Payment cancelled. Your bag is still saved.")}
+    if(a==="delete")doDelete();
+  }
+});
+$("#q").addEventListener("input",e=>{filt.q=e.target.value;renderGrid()});
+$("#brandSel").addEventListener("change",e=>{filt.brand=e.target.value;renderGrid()});
+$("#sortSel").addEventListener("change",e=>{filt.sort=e.target.value;renderGrid()});
+$("#searchJump").addEventListener("click",()=>{show("home","shop");setTimeout(()=>$("#q").focus({preventScroll:true}),400)});
+$("#qMinus").addEventListener("click",()=>{qty--;renderPdp()});
+$("#qPlus").addEventListener("click",()=>{qty++;renderPdp()});
+$("#addBtn").addEventListener("click",()=>{const it=BY[curSku];if(it.qty<=0){show("home","faq");$("#reqWhat").value=it.brand+" "+it.product+" — "+it.variant;return}add(curSku,qty);toast(`${it.status==="on_the_way"?"Pre-ordered":"Added"} ${qty} × ${it.variant}`);qty=1;renderPdp()});
+$("#bagBtn").addEventListener("click",openBag);
+$("#closeBag").addEventListener("click",closeBag);
+$("#scrim").addEventListener("click",closeBag);
+$("#toCheckout").addEventListener("click",()=>{if(!bag.length)return;renderCheckout();show("checkout")});
+document.addEventListener("keydown",e=>{if(e.key!=="Escape")return;if(!$("#modal").hidden){clearTimeout(stkTimer);closeSheet()}else closeBag()});
+$("#coZone").addEventListener("change",()=>{setErr("f-zone","");renderCheckout()});
+document.querySelectorAll("input[name=pay]").forEach(r=>r.addEventListener("change",renderCheckout));
+["coName","coPhone","coLoc","coCode"].forEach(id=>$("#"+id).addEventListener("input",()=>{const f=$("#"+id).closest(".field");if(f.classList.contains("bad"))setErr(f.id,"")}));
+$("#coForm").addEventListener("submit",e=>{e.preventDefault();if(!bag.length){toast("Your bag is empty.");return}if(!validate())return;const pay=document.querySelector("input[name=pay]:checked").value;if(pay==="stk")startStk();else placeOrder(pay)});
+$("#reqForm").addEventListener("submit",e=>{e.preventDefault();const w=$("#reqWhat").value.trim();if(!w){toast("Tell us which product you want.");$("#reqWhat").focus();return}if(!normPhone($("#reqPhone").value)){toast("Add a WhatsApp number like 0712 345 678 so we can reply.");$("#reqPhone").focus();return}toast("Request noted — we’ll WhatsApp you. (Prototype: not sent.)");e.target.reset()});
+/* admin inputs */
+$("#aq").addEventListener("input",renderAdminList);$("#aStatus").addEventListener("change",renderAdminList);$("#aPrice").addEventListener("change",renderAdminList);
+$("#aList").addEventListener("input",e=>{const r=e.target.closest("[data-row]");if(!r)return;dirty.add(r.dataset.row);r.classList.add("dirty");r.querySelector("[data-save]").disabled=false});
+$("#orderList").addEventListener("change",e=>{const s=e.target.closest("[data-order]");if(s)setOrderStatus(s.dataset.order,s.value)});
+$("#pForm").addEventListener("input",e=>{if(e.target.id==="pEta")etaTouched=true;if(e.target.id==="pShipped"&&!etaTouched&&e.target.value)$("#pEta").value=addDays(e.target.value,TRANSIT_DAYS);if(e.target.id!=="pPhoto")renderPreview()});
+$("#pForm").addEventListener("change",e=>{if(e.target.name==="pStatus"||e.target.id==="pRmPhoto")renderPreview()});
+$("#pPhoto").addEventListener("change",e=>{pFile=e.target.files[0]||null;if(pFileUrl)URL.revokeObjectURL(pFileUrl);pFileUrl=pFile?URL.createObjectURL(pFile):null;renderPreview()});
+$("#pForm").addEventListener("submit",e=>{e.preventDefault();saveProduct()});
+$("#pCancel").addEventListener("click",()=>{resetForm();adminTab="products";renderAdmin()});
+$("#pDelete").addEventListener("click",askDelete);
+document.addEventListener("submit",e=>{if(e.target.id==="loginForm"){e.preventDefault();doLogin($("#adminPw").value)}});
+$("#ownerLogin").addEventListener("click",askLogin);
+$("#logoutBtn").addEventListener("click",()=>{logout();toast("Logged out")});
+$("#refreshOrders").addEventListener("click",()=>{loadOrders();toast("Orders refreshed")});
+
+fillSelects();renderZones();renderHome();renderBag();resetForm();
+connect();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!-- ADMIN -->
+<div data-view="admin" hidden>
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><button data-go="home">Shop</button><span>/</span><span>Manage shop</span></nav>
+    <div class="adm-head">
+      <div><div class="eyebrow">Shop owner only</div><h1 style="font-size:clamp(34px,4.4vw,54px)">Manage shop</h1></div>
+      <p class="muted" style="max-width:34em" id="admMode"></p>
+    </div>
+    <div class="adm-stats" id="admStats"></div>
+    <div class="tabs" role="tablist" aria-label="Manage shop sections">
+      <button role="tab" data-tab="products" aria-selected="true">Products</button>
+      <button role="tab" data-tab="add" aria-selected="false" id="tabAddBtn">Add product</button>
+      <button role="tab" data-tab="otw" aria-selected="false">On the way <span class="tab-n" id="nOtw"></span></button>
+      <button role="tab" data-tab="orders" aria-selected="false">Orders <span class="tab-n" id="nOrders"></span></button>
+    </div>
+
+    <section data-tabpanel="products">
+      <div class="tools" style="margin-bottom:8px">
+        <div class="search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><input id="aq" type="search" placeholder="Search your products" aria-label="Search your products"></div>
+        <select id="aStatus" aria-label="Status filter"><option value="all">All statuses</option><option value="in_stock">In stock</option><option value="on_the_way">On the way</option><option value="hidden">Hidden</option></select>
+        <select id="aPrice" aria-label="Price filter"><option value="all">All prices</option><option value="missing">Price not set</option></select>
+      </div>
+      <p class="muted" style="font-size:14px;margin-bottom:6px">Change status, quantity or selling price, then press <b>Save</b> on that row. Buying costs are never recorded here.</p>
+      <div id="aList"></div>
+    </section>
+
+    <section data-tabpanel="add" hidden>
+      <form class="pform" id="pForm" novalidate>
+        <div style="display:flex;flex-direction:column;gap:22px">
+          <div class="co-sec">
+            <h2 id="pFormTitle" style="font-size:26px">Add a product</h2>
+            <div class="row2">
+              <div class="field" id="f-pBrand"><label for="pBrand">Brand</label><input id="pBrand" list="brandList" placeholder="e.g. EOS"><datalist id="brandList"></datalist><span class="err" hidden></span></div>
+              <div class="field" id="f-pProduct"><label for="pProduct">Product name</label><input id="pProduct" placeholder="e.g. 24H Moisture Body Lotion"><span class="err" hidden></span></div>
+            </div>
+            <div class="row2">
+              <div class="field" id="f-pVariant"><label for="pVariant">Scent / type</label><input id="pVariant" placeholder="e.g. Vanilla Cashmere"><span class="err" hidden></span></div>
+              <div class="field" id="f-pSize"><label for="pSize">Size <span class="hint">· as on the pack</span></label><input id="pSize" placeholder="e.g. 16 fl oz / 473 mL"><span class="err" hidden></span></div>
+            </div>
+            <div class="row2">
+              <div class="field"><label for="pCat">Category</label><select id="pCat"></select></div>
+              <div class="field"><label for="pNotes">Short description <span class="hint">· optional</span></label><input id="pNotes" placeholder="e.g. Sulfate-free; for dry hair"></div>
+            </div>
+          </div>
+          <div class="co-sec">
+            <h2 style="font-size:22px">Stock &amp; price</h2>
+            <div class="row2">
+              <div class="field" id="f-pQty"><label for="pQty">Quantity</label><input id="pQty" type="number" min="0" step="1" inputmode="numeric" value="1"><span class="err" hidden></span></div>
+              <div class="field"><label for="pPrice">Selling price (KSh) <span class="hint">· leave blank if not decided</span></label><input id="pPrice" type="number" min="0" step="10" inputmode="numeric" placeholder="e.g. 2800"></div>
+            </div>
+            <div class="paym" role="radiogroup" aria-label="Status">
+              <label class="opt"><input type="radio" name="pStatus" value="in_stock" checked><b>In stock in Kenya</b><span>Customers can buy it now for delivery.</span></label>
+              <label class="opt"><input type="radio" name="pStatus" value="on_the_way"><b>On the way from the US</b><span>Shows under “Arriving soon”. Customers can pre-order it.</span></label>
+            </div>
+            <div class="row2" id="otwFields" hidden>
+              <div class="field"><label for="pShipped">Shipped from the US on</label><input id="pShipped" type="date"></div>
+              <div class="field" id="f-pEta"><label for="pEta">Expected in Kenya <span class="hint">· about 3 months later</span></label><input id="pEta" type="date"><span class="err" hidden></span></div>
+            </div>
+          </div>
+          <div class="co-sec">
+            <h2 style="font-size:22px">Photo</h2>
+            <div class="field"><label for="pPhoto">Upload a photo of the actual item <span class="hint">· JPG or PNG from your phone</span></label><input id="pPhoto" type="file" accept="image/jpeg,image/png,image/webp"></div>
+            <p class="muted" style="font-size:14px">No photo yet? We’ll show a drawing instead. Pick the pack shape and main colour:</p>
+            <div class="row2">
+              <div class="field"><label for="pShape">Pack shape</label><select id="pShape"></select></div>
+              <div class="field"><label for="pColor">Main colour</label><input id="pColor" type="color" value="#E9D3B4" style="padding:4px;height:48px"></div>
+            </div>
+            <label style="display:flex;gap:10px;align-items:center;font-size:14.5px" id="rmPhotoWrap" hidden><input type="checkbox" id="pRmPhoto" style="width:18px;height:18px;accent-color:var(--accent)"> Remove the current photo</label>
+          </div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <button class="btn btn-accent" type="submit" id="pSave">Add to shop</button>
+            <button class="btn btn-line" type="button" id="pCancel" hidden>Cancel editing</button>
+            <button class="btn btn-line" type="button" id="pDelete" hidden style="color:var(--danger);border-color:var(--danger)">Delete product</button>
+          </div>
+        </div>
+        <aside class="pprev">
+          <div class="mono muted">Preview</div>
+          <div class="card" style="cursor:default" id="pPreview"></div>
+        </aside>
+      </form>
+    </section>
+
+    <section data-tabpanel="otw" hidden>
+      <p class="muted" style="margin-bottom:18px;max-width:60ch">Boxes shipped from the US, grouped by expected arrival. When a box lands, press <b>Mark as arrived</b> and its products move to “In stock”.</p>
+      <div id="shipList" style="display:flex;flex-direction:column;gap:16px"></div>
+    </section>
+
+    <section data-tabpanel="orders" hidden>
+      <button class="btn-sm line" id="refreshOrders" style="float:right;margin-left:12px">Refresh</button><p class="muted" style="margin-bottom:18px;max-width:62ch">New orders appear here. Setting an order to <b>Confirmed</b> takes the items out of stock; <b>Cancelled</b> puts them back.</p>
+      <div id="orderList" style="display:flex;flex-direction:column;gap:14px"></div>
+    </section>
+  </div>
+</div>
