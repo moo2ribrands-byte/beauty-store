@@ -25,6 +25,11 @@ t=re.sub(r'<script>.*</script>','<script>\n'+open(HERE+'/app.src.js').read().rep
 t=t.replace('\\\\','\\')
 items=json.load(open(HERE+'/seed.json'))
 t=t.replace('/*DATA*/',json.dumps(items,ensure_ascii=False,separators=(',',':')))
+mocks={}
+for f in sorted(os.listdir(HERE+'/../img/p')) if os.path.isdir(HERE+'/../img/p') else []:
+    vb=re.search(r'viewBox="([-\d. ]+)"',open(HERE+'/../img/p/'+f).read()).group(1).split()
+    mocks[f[:-4].upper()]=[round(float(vb[2]),1),round(float(vb[3]),1)]
+t=t.replace('/*MOCKS*/{}',json.dumps(mocks,separators=(',',':')))
 head='<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">\n<meta name="description" content="Genuine US body care, hair care and fragrance, delivered across Kenya. Pay with M-Pesa.">\n<meta name="theme-color" content="#26131F">\n<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%2326131F%22/%3E%3Ctext x=%2216%22 y=%2223%22 text-anchor=%22middle%22 font-family=%22Arial Black,sans-serif%22 font-size=%2219%22 fill=%22%23F07CA3%22%3Eh%3C/text%3E%3C/svg%3E">\n'
 i=t.index('<div class="proto">')
 t=head+t[:i]+'</head>\n<body>\n'+t[i:]+'\n</body>\n</html>\n'

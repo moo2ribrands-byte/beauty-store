@@ -1,6 +1,8 @@
 /* Fallback catalogue: the Sept 2026 inventory. The live catalogue comes from the shop database. */
 const SNAPSHOT=/*DATA*/;
 const INVENTORY_DATE="4 Sep 2026";
+/* Packaging mockups in img/p/ (made by scripts/mockups.py): sku -> [width, height] */
+const MOCKS=/*MOCKS*/{};
 const TRANSIT_DAYS=91; /* US → Kenya usually takes about 3 months */
 /* Delivery zones — fill in fees (numbers, KSh) and times. */
 let ZONES=[
@@ -93,9 +95,16 @@ const SH={
  mist(id,c,t){return `<rect x="114" y="102" width="72" height="216" rx="12" fill="url(#${id}b)" opacity=".92"/><rect x="124" y="48" width="52" height="58" rx="16" fill="url(#${id}c)"/>`+labelBlock(120,166,60,116,id,c[3],t)+hl(122,112,196,6)},
  spray(id,c,t){return `<rect x="106" y="124" width="88" height="194" rx="18" fill="url(#${id}b)"/><rect x="136" y="104" width="28" height="24" fill="${mix(c[1],-.1)}"/><rect x="128" y="64" width="44" height="44" rx="10" fill="url(#${id}c)"/><rect x="164" y="76" width="14" height="7" rx="3" fill="${mix(c[1],-.2)}"/>`+labelBlock(114,168,72,116,id,c[3],t)+hl(114,136,168,6)}
 };
+const mockOf=it=>{const m=MOCKS[it.sku];return m?{src:"img/p/"+it.sku.toLowerCase()+".svg",w:m[0],h:m[1]}:null};
 function render(x,bare){
   const it=typeof x==="string"?BY[x]:x;if(!it)return"";
-  const c=it.c,id="r"+(uid++);
+  const c=it.c,id="r"+(uid++),mk=mockOf(it);
+  const label=esc(it.brand+" "+it.product+" — "+it.variant+", "+it.size)+" (illustration)";
+  if(mk&&bare)return `<svg viewBox="0 0 ${mk.w} ${mk.h}" aria-hidden="true"><image href="${mk.src}" width="${mk.w}" height="${mk.h}"/></svg>`;
+  if(mk){const k=Math.min(220/mk.w,284/mk.h),w=mk.w*k,h=mk.h*k;
+    return `<svg viewBox="0 0 300 360" role="img" aria-label="${label}"><defs><radialGradient id="${id}s"><stop offset="0" stop-color="#000" stop-opacity=".28"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient></defs>`+
+    `<rect width="300" height="360" fill="${c[4]}"/><circle cx="190" cy="150" r="118" fill="${mix(c[4],.5)}"/><rect y="318" width="300" height="42" fill="${mix(c[4],-.04)}"/><ellipse cx="150" cy="320" rx="${Math.max(40,w*.56).toFixed(1)}" ry="10" fill="url(#${id}s)"/>`+
+    `<image href="${mk.src}" x="${(150-w/2).toFixed(1)}" y="${(320-h).toFixed(1)}" width="${w.toFixed(1)}" height="${h.toFixed(1)}"/></svg>`}
   const ml=esc(it.ml.replace("2 × ","").replace(" fl oz","")).slice(0,14);
   const small=/^\d+ mL$/.test(it.ml)&&parseInt(it.ml)<350&&it.shape==="flip";
   let body;
@@ -108,7 +117,7 @@ function render(x,bare){
   }
   const defs=["","a","b"].map(s=>{const b0=s==="b"?mix(c[0],.25):c[0];return cyl(id+s+"b",b0)+cyl(id+s+"c",c[1],.9)+cyl(id+s+"l",c[2],.35)}).join("");
   if(bare)return `<svg viewBox="${({pumpL:"84 46 128 274",pump:"84 66 122 254",flip:"94 50 112 270",mist:"110 44 80 276",tube:"86 48 128 272",stick:"100 88 100 232",aerosol:"104 48 92 272",spray:"102 60 96 260",oil:"116 54 68 266",jar:"60 178 180 142",duo:"20 40 260 280"})[it.shape]}" aria-hidden="true"><defs>${defs}</defs>${body}</svg>`;
-  return `<svg viewBox="0 0 300 360" role="img" aria-label="${esc(it.brand+" "+it.product+" — "+it.variant+", "+it.size)} (illustration)"><defs>${defs}<radialGradient id="${id}s"><stop offset="0" stop-color="#000" stop-opacity=".28"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient></defs>`+
+  return `<svg viewBox="0 0 300 360" role="img" aria-label="${label}"><defs>${defs}<radialGradient id="${id}s"><stop offset="0" stop-color="#000" stop-opacity=".28"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient></defs>`+
   `<rect width="300" height="360" fill="${c[4]}"/><circle cx="190" cy="150" r="118" fill="${mix(c[4],.5)}"/><rect y="318" width="300" height="42" fill="${mix(c[4],-.04)}"/><ellipse cx="150" cy="320" rx="${it.shape==="duo"?118:it.shape==="jar"?96:72}" ry="10" fill="url(#${id}s)"/>${body}</svg>`;
 }
 function visual(x,src){
@@ -225,7 +234,7 @@ function renderPdp(){
   if(it.notes)rows.push(["About",it.notes]);
   rows.push(["SKU",it.sku]);
   $("#specs").innerHTML=rows.map(([k,v])=>`<dt>${k}</dt><dd>${esc(v)}</dd>`).join("");
-  $("#photoNote").textContent=it.photo?"This is a photo of the actual item we have in stock.":"This is an illustration of the pack shape and scent colour. [REPLACE WITH A REAL PHOTO — add one in Manage shop.]";
+  $("#photoNote").textContent=it.photo?"This is a photo of the actual item we have in stock.":mockOf(it)?"This is an illustration drawn from the brand’s current packaging, not a photo of our stock. [REPLACE WITH A REAL PHOTO — add one in Manage shop.]":"This is an illustration of the pack shape and scent colour. [REPLACE WITH A REAL PHOTO — add one in Manage shop.]";
 }
 
 /* ---------- bag ---------- */

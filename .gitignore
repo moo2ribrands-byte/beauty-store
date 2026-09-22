@@ -2,3 +2,5 @@ node_modules/
 .vercel/
 .env*
 .DS_Store
+scripts/_preview.html
+__pycache__/
