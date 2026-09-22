@@ -11,8 +11,8 @@ let ZONES=[
   {id:"env",name:"Nairobi environs — Kiambu, Ruiru, Thika Rd, Kitengela, Syokimau, Ngong, Rongai",how:"Rider",when:"[NEXT DAY]",fee:null},
   {id:"ctry",name:"Rest of Kenya",how:"Courier / parcel office [COURIER]",when:"[1–3 DAYS]",fee:null}
 ];
-const CATS=["Body care","Shower","Hair","Deodorant","Fragrance"];
-const SHAPES=[["pump","Pump bottle"],["pumpL","Large pump bottle (1 L)"],["flip","Flip-cap bottle"],["duo","Shampoo + conditioner duo"],["jar","Jar / tub"],["tube","Squeeze tube"],["oil","Body oil bottle"],["aerosol","Spray can"],["stick","Deodorant stick"],["mist","Fragrance mist"],["spray","Spray bottle"]];
+const CATS=["Body care","Shower","Hair","Deodorant","Fragrance","Bags"];
+const SHAPES=[["pump","Pump bottle"],["pumpL","Large pump bottle (1 L)"],["flip","Flip-cap bottle"],["duo","Shampoo + conditioner duo"],["jar","Jar / tub"],["tube","Squeeze tube"],["oil","Body oil bottle"],["aerosol","Spray can"],["stick","Deodorant stick"],["mist","Fragrance mist"],["spray","Spray bottle"],["bag","Handbag"]];
 const SHAPE_KEYS=SHAPES.map(s=>s[0]);
 const FEATURED=["EOS|24H Moisture Body Lotion","EOS|Cashmere Body Wash","Fenty Hair|Moisture Repair Deep Conditioner","Bath & Body Works|Fine Fragrance Mist","EOS|Cashmere Whipped Oil Butter","Luseta|Shea Butter & Argan Oil Body Wash","Dove|Advanced Care Antiperspirant Deodorant Stick","EOS|Cashmere Body Oil"];
 
@@ -93,6 +93,7 @@ const SH={
  aerosol(id,c,t){return `<rect x="108" y="108" width="84" height="210" rx="10" fill="url(#${id}b)"/><ellipse cx="150" cy="110" rx="42" ry="12" fill="${mix(c[0],-.2)}"/><rect x="114" y="52" width="72" height="60" rx="12" fill="url(#${id}c)" opacity=".92"/>`+labelBlock(108,164,84,118,id,c[3],t)+`<rect x="108" y="306" width="84" height="12" rx="4" fill="${mix(c[0],-.25)}"/>`+hl(118,120,184,6)},
  stick(id,c,t){return `<rect x="104" y="146" width="92" height="172" rx="26" fill="url(#${id}b)"/><rect x="104" y="92" width="92" height="66" rx="26" fill="url(#${id}c)"/><rect x="104" y="150" width="92" height="3" fill="${mix(c[1],-.25)}"/>`+labelBlock(114,178,72,106,id,c[3],t)+hl(114,104,200,6)},
  mist(id,c,t){return `<rect x="114" y="102" width="72" height="216" rx="12" fill="url(#${id}b)" opacity=".92"/><rect x="124" y="48" width="52" height="58" rx="16" fill="url(#${id}c)"/>`+labelBlock(120,166,60,116,id,c[3],t)+hl(122,112,196,6)},
+ bag(id,c,t){return `<path d="M96 76C96 20 204 20 204 76" fill="none" stroke="${mix(c[0],-.2)}" stroke-width="9" stroke-linecap="round"/><path d="M58 96L242 96L234 306Q233 318 221 318L79 318Q67 318 66 306Z" fill="url(#${id}b)"/><rect x="62" y="92" width="176" height="6" rx="2" fill="${c[3]}"/>`+[110,190].map(x=>`<path d="M${x-9} 98h18v26l-9 10l-9-10z" fill="${mix(c[0],-.08)}"/>`).join("")+`<text x="150" y="136" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" letter-spacing="1.5" fill="${c[3]}">${t}</text>`+hl(78,110,190,7,.2)},
  spray(id,c,t){return `<rect x="106" y="124" width="88" height="194" rx="18" fill="url(#${id}b)"/><rect x="136" y="104" width="28" height="24" fill="${mix(c[1],-.1)}"/><rect x="128" y="64" width="44" height="44" rx="10" fill="url(#${id}c)"/><rect x="164" y="76" width="14" height="7" rx="3" fill="${mix(c[1],-.2)}"/>`+labelBlock(114,168,72,116,id,c[3],t)+hl(114,136,168,6)}
 };
 const mockOf=it=>{const m=MOCKS[it.sku];return m?{src:"img/p/"+it.sku.toLowerCase()+".svg",w:m[0],h:m[1]}:null};
@@ -116,7 +117,7 @@ function render(x,bare){
     body=small?`<g transform="translate(150 318) scale(.86) translate(-150 -318)">${inner}</g>`:inner;
   }
   const defs=["","a","b"].map(s=>{const b0=s==="b"?mix(c[0],.25):c[0];return cyl(id+s+"b",b0)+cyl(id+s+"c",c[1],.9)+cyl(id+s+"l",c[2],.35)}).join("");
-  if(bare)return `<svg viewBox="${({pumpL:"84 46 128 274",pump:"84 66 122 254",flip:"94 50 112 270",mist:"110 44 80 276",tube:"86 48 128 272",stick:"100 88 100 232",aerosol:"104 48 92 272",spray:"102 60 96 260",oil:"116 54 68 266",jar:"60 178 180 142",duo:"20 40 260 280"})[it.shape]}" aria-hidden="true"><defs>${defs}</defs>${body}</svg>`;
+  if(bare)return `<svg viewBox="${({pumpL:"84 46 128 274",pump:"84 66 122 254",flip:"94 50 112 270",mist:"110 44 80 276",tube:"86 48 128 272",stick:"100 88 100 232",aerosol:"104 48 92 272",spray:"102 60 96 260",oil:"116 54 68 266",jar:"60 178 180 142",duo:"20 40 260 280",bag:"50 20 200 300"})[it.shape]}" aria-hidden="true"><defs>${defs}</defs>${body}</svg>`;
   return `<svg viewBox="0 0 300 360" role="img" aria-label="${label}"><defs>${defs}<radialGradient id="${id}s"><stop offset="0" stop-color="#000" stop-opacity=".28"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient></defs>`+
   `<rect width="300" height="360" fill="${c[4]}"/><circle cx="190" cy="150" r="118" fill="${mix(c[4],.5)}"/><rect y="318" width="300" height="42" fill="${mix(c[4],-.04)}"/><ellipse cx="150" cy="320" rx="${it.shape==="duo"?118:it.shape==="jar"?96:72}" ry="10" fill="url(#${id}s)"/>${body}</svg>`;
 }
@@ -154,7 +155,7 @@ function facts(){
 }
 function card(g){
   const s=defaultSku(g),it=BY[s],q=stockOf(g),[st,cls]=stockInfo(q,it),n=g.skus.length;
-  const dots=n>1?`<div class="dots">${g.skus.slice(0,7).map(k=>`<i style="background:${BY[k].c[0]}"></i>`).join("")}<em>${n} ${g.cat==="Hair"?"types":"scents"}</em></div>`:`<div class="dots"><em>${esc(it.variant)}</em></div>`;
+  const dots=n>1?`<div class="dots">${g.skus.slice(0,7).map(k=>`<i style="background:${BY[k].c[0]}"></i>`).join("")}<em>${n} ${g.cat==="Hair"?"types":g.cat==="Bags"?"colours":"scents"}</em></div>`:`<div class="dots"><em>${esc(it.variant)}</em></div>`;
   return `<button class="card" data-product="${g.id}"><div class="r">${visual(s)}<span class="badge ${cls}">${esc(st)}</span></div><div><div class="card-brand">${esc(g.brand)}</div><div class="card-name">${esc(g.product)}</div></div>${dots}<div class="card-meta"><b>${groupPrice(g)}</b><span class="muted">${esc(it.ml)}</span></div></button>`;
 }
 function renderCats(){
@@ -223,18 +224,18 @@ function renderPdp(){
   const s=$("#pdpStock");s.textContent=otw?"On the way · arrives ~"+dLong(it.eta):st;s.className="stock "+cls;
   $("#pdpPre").hidden=!otw;
   $("#pdpPre").innerHTML=otw?`<b>Pre-order.</b> This is on its way from the US and should land around <b>${dLong(it.eta)}</b>. Order now and we deliver it as soon as it arrives. [PRE-ORDER PAYMENT RULE — e.g. full payment or 50% deposit by M-Pesa]`:"";
-  $("#variantName").textContent=it.variant;
+  $("#variantName").textContent=it.variant;$("#variantName").previousSibling.textContent=it.cat==="Bags"?"Colour ":"Scent / type ";
   $("#variants").innerHTML=cur.skus.map(k=>{const v=BY[k];return `<button class="variant${v.qty<=0?" sold":""}" data-sku="${esc(k)}" aria-pressed="${k===curSku}"><i style="background:${v.c[0]}"></i>${esc(v.variant)}</button>`}).join("");
   qty=Math.max(1,Math.min(qty,Math.max(left,1)));
   $("#qOut").textContent=qty;$("#qMinus").disabled=qty<=1;$("#qPlus").disabled=qty>=left;
   const b=$("#addBtn");b.disabled=it.qty>0&&left<=0;
   b.textContent=it.qty<=0?(otw?"Pre-orders full — request more":"Sold out — request it"):left<=0?"All in your bag":otw?"Pre-order":"Add to bag";
-  const rows=[["Size",it.size],["Scent / type",it.variant],["Condition",it.cond+", sealed"],["Category",it.cat]];
+  const bag=it.cat==="Bags";const rows=[["Size",it.size],[bag?"Colour":"Scent / type",it.variant],["Condition",it.cond+(bag?", with tags":", sealed")],["Category",it.cat]];
   if(otw)rows.push(["Arrives","About "+dLong(it.eta)]);
   if(it.notes)rows.push(["About",it.notes]);
   rows.push(["SKU",it.sku]);
   $("#specs").innerHTML=rows.map(([k,v])=>`<dt>${k}</dt><dd>${esc(v)}</dd>`).join("");
-  $("#photoNote").textContent=it.photo?"This is a photo of the actual item we have in stock.":mockOf(it)?"This is an illustration drawn from the brand’s current packaging, not a photo of our stock. [REPLACE WITH A REAL PHOTO — add one in Manage shop.]":"This is an illustration of the pack shape and scent colour. [REPLACE WITH A REAL PHOTO — add one in Manage shop.]";
+  $("#photoNote").textContent=it.photo?"This is a photo of the actual item we have in stock.":mockOf(it)?(it.cat==="Bags"?"This is an illustration drawn from photos of the bag we have in stock.":"This is an illustration drawn from the brand’s current packaging, not a photo of our stock.")+" [REPLACE WITH A REAL PHOTO — add one in Manage shop.]":"This is an illustration of the pack shape and scent colour. [REPLACE WITH A REAL PHOTO — add one in Manage shop.]";
 }
 
 /* ---------- bag ---------- */

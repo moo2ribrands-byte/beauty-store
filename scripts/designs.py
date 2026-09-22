@@ -728,3 +728,109 @@ def ciroa():
 
 
 D["CIR-VI-SG-1L"] = ciroa
+
+
+# ================================================================= MICHAEL KORS handbags (from photos of our own stock)
+GOLD_HW, SILVER_HW = "#C9A55A", "#C3C8CF"
+
+
+def saffiano(s, c):
+    """Fine cross-hatched grain of saffiano leather."""
+    i = s.nid("p")
+    s.defs.append(f'<pattern id="{i}" width="3" height="3" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">'
+                  f'<path d="M0 0L0 3M0 0L3 0" stroke="{mix(c, .16 if c < "#80" else -.1)}" stroke-width=".35" opacity=".55"/></pattern>')
+    return f"url(#{i})"
+
+
+def hw(s, c):
+    return s.grad([(0, mix(c, -.35)), (.35, mix(c, .45)), (.6, c), (1, mix(c, -.4))], 1, 1)
+
+
+def tab(x, y, w, h, fill, edge):
+    """Pointed leather handle tab."""
+    return (f'<path d="M{x - w / 2} {y}L{x + w / 2} {y}L{x + w / 2} {y + h * .7}L{x} {y + h}L{x - w / 2} {y + h * .7}Z" fill="{fill}" stroke="{edge}" stroke-width=".6"/>'
+            f'<path d="M{x - w / 2 + 2} {y + 1}L{x - w / 2 + 2} {y + h * .68}L{x} {y + h - 2.5}L{x + w / 2 - 2} {y + h * .68}L{x + w / 2 - 2} {y + 1}" fill="none" stroke="{edge}" stroke-width=".4" stroke-dasharray="1.2 1"/>')
+
+
+def mk_satchel(sku, c, metal, w=240, h=250):
+    def make():
+        s = Svg(sku, w, h)
+        top, bot = h - 150, h
+        L, R = 18, w - 18
+        edge, dark = mix(c, -.28), mix(c, -.16)
+        m = hw(s, metal)
+        # back panel + side wings, then handles, then front
+        s.add(Svg.path(f"M{L + 6} {top - 14}L{R - 6} {top - 14}L{R - 6} {top + 10}L{L + 6} {top + 10}Z", mix(c, -.1)),
+              Svg.path(f"M{L} {top - 4}L{L - 16} {top - 12}L{L - 6} {bot - 10}L{L + 4} {bot}Z", s.grad([(0, mix(c, -.3)), (1, dark)])),
+              Svg.path(f"M{R} {top - 4}L{R + 16} {top - 12}L{R + 6} {bot - 10}L{R - 4} {bot}Z", s.grad([(0, dark), (1, mix(c, -.3))])),
+              Svg.rect(L + 8, top - 10, R - L - 16, 4, m, rx=1))
+        for off, o in ((10, .75), (0, 1)):
+            hx1, hx2 = L + 40 + off, R - 40 + off
+            s.add(f'<path d="M{hx1} {top + 8}C{hx1} {top - 118} {hx2} {top - 118} {hx2} {top + 8}" fill="none" stroke="{mix(c, -.2 if off else 0)}" stroke-width="11" stroke-linecap="round" opacity="{o}"/>',
+                  f'<path d="M{hx1 - 2} {top + 4}C{hx1 - 2} {top - 110} {hx2 + 2} {top - 110} {hx2 + 2} {top + 4}" fill="none" stroke="#fff" stroke-width="1.4" opacity=".18"/>')
+        front = f"M{L} {top}L{R} {top}L{R} {bot - 8}Q{R} {bot} {R - 8} {bot}L{L + 8} {bot}Q{L} {bot} {L} {bot - 8}Z"
+        s.add(Svg.path(front, c), Svg.path(front, saffiano(s, c)), Svg.path(front, s.shade(.35)),
+              f'<path d="{front}" fill="none" stroke="{edge}" stroke-width="1"/>',
+              f'<rect x="{L + 4}" y="{top + 4}" width="{R - L - 8}" height="{bot - top - 8}" rx="6" fill="none" stroke="{edge}" stroke-width=".5" stroke-dasharray="1.6 1.2"/>')
+        for x in (L + 40, R - 40):
+            s.add(f'<circle cx="{x}" cy="{top + 4}" r="6.5" fill="none" stroke="{m}" stroke-width="2.4"/>',
+                  Svg.rect(x - 5, top + 9, 10, 5, m, rx=1.5), tab(x, top + 13, 20, 40, c, edge))
+        s.add(T(w / 2, top + 34, "MICHAEL KORS", 9, m, SANS, 500, ls=1.2, fit=70))
+        return s
+    return make
+
+
+def mk_greenwich(sku, c, metal):
+    def make():
+        s = Svg(sku, 230, 230)
+        top, bot, L, R = 70, 230, 20, 210
+        edge = mix(c, .22)
+        m = hw(s, metal)
+        s.add(f'<path d="M{L + 10} {top + 8}C{L - 10} {top - 80} {R + 10} {top - 80} {R - 10} {top + 8}" fill="none" stroke="{mix(c, .1)}" stroke-width="7"/>')
+        for x in (L + 10, R - 10):
+            s.add(f'<circle cx="{x}" cy="{top + 8}" r="6" fill="none" stroke="{m}" stroke-width="2.6"/>')
+        body = f"M{L} {top + 10}L{R} {top + 10}L{R} {bot - 6}Q{R} {bot} {R - 6} {bot}L{L + 6} {bot}Q{L} {bot} {L} {bot - 6}Z"
+        flap = f"M{L - 2} {top + 4}Q{L - 2} {top} {L + 6} {top}L{R - 6} {top}Q{R + 2} {top} {R + 2} {top + 4}L{R + 2} {top + 104}C{R - 40} {top + 118} {L + 40} {top + 118} {L - 2} {top + 104}Z"
+        s.add(Svg.path(body, c), Svg.path(body, saffiano(s, c)), Svg.path(body, s.shade(.3)),
+              Svg.path(flap, mix(c, .03)), Svg.path(flap, saffiano(s, c)),
+              f'<path d="{flap}" fill="none" stroke="{edge}" stroke-width=".8"/>',
+              Svg.path(f"M{L - 2} {top + 104}C{L + 40} {top + 118} {R - 40} {top + 118} {R + 2} {top + 104}", "none", f'stroke="#000" stroke-width="2" opacity=".35"'),
+              Svg.rect(104, top - 2, 22, 146, mix(c, .05), rx=3, extra=f'stroke="{edge}" stroke-width=".6"'),
+              f'<path d="M104 {top + 140}L126 {top + 140}L126 {top + 146}Q115 {top + 152} 104 {top + 146}Z" fill="{mix(c, .05)}" stroke="{edge}" stroke-width=".6"/>',
+              f'<circle cx="115" cy="{top + 100}" r="17" fill="{m}"/><circle cx="115" cy="{top + 100}" r="13" fill="{mix(c, .05)}"/>',
+              T(115, top + 105.5, "MK", 14, m, SANS, 800, fit=21))
+        return s
+    return make
+
+
+def mk_tote(sku, c, metal):
+    def make():
+        s = Svg(sku, 250, 300)
+        top, bot = 130, 300
+        L, R = 22, 228
+        edge, dark = mix(c, .2), mix(c, .08)
+        m = hw(s, metal)
+        for x1, x2, o in ((70, 170, .7), (82, 182, 1)):
+            s.add(f'<path d="M{x1} {top + 40}C{x1 - 10} {top - 170} {x2 + 10} {top - 170} {x2} {top + 40}" fill="none" stroke="{mix(c, .06 if o < 1 else .12)}" stroke-width="6.5" opacity="{o}"/>')
+        s.add(Svg.path(f"M{L - 10} {top + 26}L{L + 8} {top + 20}L{L + 14} {bot}L{L - 2} {bot - 8}Z", dark),
+              Svg.path(f"M{R + 10} {top + 26}L{R - 8} {top + 20}L{R - 14} {bot}L{R + 2} {bot - 8}Z", dark))
+        body = f"M{L} {top}L{R} {top}L{R - 12} {bot - 6}Q{R - 13} {bot} {R - 19} {bot}L{L + 19} {bot}Q{L + 13} {bot} {L + 12} {bot - 6}Z"
+        s.add(Svg.path(body, c), Svg.path(body, saffiano(s, c)), Svg.path(body, s.shade(.3)),
+              f'<path d="{body}" fill="none" stroke="{edge}" stroke-width=".8"/>',
+              Svg.rect(L, top - 2, R - L, 4, m, rx=1), Svg.rect(L - 4, top - 4, 16, 6, m, rx=2),
+              f'<path d="M{L + 44} {top + 20}L{L + 38} {bot - 8}M{R - 44} {top + 20}L{R - 38} {bot - 8}" stroke="{edge}" stroke-width=".7"/>')
+        for x in (82, 182):
+            s.add(tab(x, top + 34, 13, 34, c, edge))
+        s.add(T(125, top + 26, "MICHAEL KORS", 8, m, SANS, 500, ls=1.2, fit=64),
+              f'<path d="M82 {top + 50}L76 {top + 120}" stroke="{mix(c, .1)}" stroke-width="2.4"/>',
+              f'<circle cx="76" cy="{top + 132}" r="12" fill="{m}"/><circle cx="76" cy="{top + 132}" r="9" fill="{mix(c, .05)}"/>',
+              T(76, top + 136, "MK", 9, m, SANS, 800, fit=13))
+        return s
+    return make
+
+
+D["MK-MAR-SAT-BLS-G"] = mk_satchel("mkbls", "#E3C4C5", GOLD_HW)
+D["MK-GRW-XB-BLK-S"] = mk_greenwich("mkgrw", "#1B1B1E", SILVER_HW)
+D["MK-MAR-SAT-BLK-S"] = mk_satchel("mksatS", "#1B1B1E", SILVER_HW)
+D["MK-MAR-SAT-BLK-G"] = mk_satchel("mksatG", "#1B1B1E", GOLD_HW)
+D["MK-MAR-TOT-BLK-S"] = mk_tote("mktot", "#1B1B1E", SILVER_HW)
