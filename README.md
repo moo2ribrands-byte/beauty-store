@@ -13,7 +13,7 @@ Delivery-only shop for genuine US beauty brands in Kenya, with M-Pesa checkout (
 ## Deploy on Vercel (one time, about 5 minutes)
 
 1. **Import the repo:** on vercel.com, go to **Add New → Project** and pick this GitHub repo. Leave every setting as it is (Framework: *Other*, no build command) and press **Deploy**.
-2. **Add storage:** in the project, go to **Storage → Create → Blob** and create a store with **public** access. Connect it to the project. This adds `BLOB_READ_WRITE_TOKEN` automatically.
+2. **Add storage:** in the project, go to **Storage → Create → Blob** and create a store with **public** access. Connect it to the project. This adds `BLOB_STORE_ID` (or `BLOB_READ_WRITE_TOKEN` on older stores) automatically.
 3. **Set the owner password:** in **Settings → Environment Variables**, add `ADMIN_PASSWORD` with 8 or more characters, for Production and Preview.
 4. **Redeploy:** go to **Deployments**, open the latest one, choose **⋯ → Redeploy**. The redeploy picks up the new variables.
 
